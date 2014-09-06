@@ -1,0 +1,6 @@
+Bloomberg API for Python
+========================
+
+Install using the following command:
+
+    env BLPAPI_ROOT=./cpp python setup.py install --user
