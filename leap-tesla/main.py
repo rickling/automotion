@@ -13,7 +13,10 @@ sys.path.insert(0, lib_dir)
 import Leap
 from Leap import CircleGesture, KeyTapGesture, ScreenTapGesture, SwipeGesture
 from tesla_wrapper import TeslaWrapper
+from twilio_wrapper import TwilioWrapper
+import bloomberg_wrapper
 from math import sqrt
+import time
 
 def do_nothing():
     pass
@@ -29,6 +32,7 @@ class SampleListener(Leap.Listener):
     def on_init(self, controller):
         print "Initialized"
         self.tesla = TeslaWrapper()
+        self.twilio = TwilioWrapper()
 
         self.TAP_GESTURES = {
             Leap.Finger.TYPE_THUMB : do_nothing,
@@ -83,6 +87,13 @@ class SampleListener(Leap.Listener):
 
             #print pp
 
+            ## STOCKS
+            if hand.grab_strength > 0.9:
+                for finger in hand.fingers:
+                    if finger.type() == Leap.Finger.TYPE_THUMB:
+                        if finger.direction[0] < -0.9:
+                            bloomberg_wrapper.main()
+
             #if direction[1] > 0.6 and normal[2] > 0.6:
             for finger in hand.fingers:
                 if finger.type() == Leap.Finger.TYPE_INDEX:
@@ -97,11 +108,22 @@ class SampleListener(Leap.Listener):
                         pass
             #print FLICKING_OFF
 
-
-            # Calculate the hand's pitch, roll, and yaw angles
-
             # Get arm bone
             arm = hand.arm
+
+            #Phone call
+            PINKY = False
+            THUMB = False
+            for finger in hand.fingers:
+                if finger.type() == Leap.Finger.TYPE_PINKY:
+                    if finger.direction[0] < -0.75:
+                        PINKY = True
+                elif finger.type() == Leap.Finger.TYPE_THUMB:
+                    if finger.direction[1] > 0.75:
+                        THUMB = True
+            if PINKY and THUMB:
+                self.twilio.call_home()
+                time.sleep(2)
 
 
             """
@@ -152,16 +174,20 @@ class SampleListener(Leap.Listener):
 
             if gesture.type == Leap.Gesture.TYPE_SWIPE:
                 swipe = SwipeGesture(gesture)
-                print "  Swipe id: %d, state: %s, position: %s, direction: %s, speed: %f" % (
-                       gesture.id, self.state_names[gesture.state],
-                      swipe.position, swipe.direction, swipe.speed)
-                """
+                #print "  Swipe id: %d, state: %s, position: %s, direction: %s, speed: %f" % (
+                #       gesture.id, self.state_names[gesture.state],
+                #      swipe.position, swipe.direction, swipe.speed)
+                
                 #Sunroof Control
                 if swipe.direction[1] > 0.9:
                     self.tesla.open_sun_roof()
+                    time.sleep(2)
                 elif swipe.direction[1] < -0.9:
                     self.tesla.close_sun_roof()
-                """
+                    time.sleep(2)
+                elif swipe.direction[2] < -0.9:
+                    time.sleep(2)
+                
 
             if gesture.type == Leap.Gesture.TYPE_KEY_TAP:
                 tap = Leap.KeyTapGesture(gesture)
@@ -169,7 +195,8 @@ class SampleListener(Leap.Listener):
 
                 if tap.pointable.is_finger:
                     finger = Leap.Finger(tap.pointable)
-                    #self.TAP_GESTURES[finger.type()]()
+                    self.TAP_GESTURES[finger.type()]()
+                    time.sleep(2)
 
 
     def state_string(self, state):
