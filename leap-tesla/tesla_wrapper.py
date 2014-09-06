@@ -3,14 +3,16 @@ import json
 
 class TeslaWrapper(object):
 	""" Python Wrapper for the Tesla API """
-	def __init__(self):
+	def __init__(self, is_local=True):
 		self.url = "http://localhost:8080/mockTesla/"
 		self.vehicle_id = None
 		self.session = requests.session()
+		if is_local:
+			self.login()
+			self.set_vehicle_id(1234567890)
 
 	def query_and_output(self, path):
 		url = self.url + path
-		print url
 		r  = self.session.post(url)
 		self.output(r)
 
