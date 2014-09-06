@@ -6,9 +6,13 @@
 //  Copyright (c) 2014 Rick Ling. All rights reserved.
 //
 
+#import <Rdio/Rdio.h>
+#import "ConsumerCredentials.h"
 #import "MusicViewController.h"
 
 @interface MusicViewController ()
+
+@property (nonatomic, strong) Rdio *rdio;
 
 @end
 
@@ -16,7 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupRdio];
+}
+
+#pragma mark - Setup rdio
+- (void)setupRdio {
+    self.rdio = [[Rdio alloc] initWithConsumerKey:CONSUMER_KEY andSecret:CONSUMER_SECRET delegate:nil];
+    [self.rdio preparePlayerWithDelegate:nil];
+    NSArray *sources = [NSArray arrayWithObjects:@"t1", @"p1", @"a1", nil];
+    [self.rdio.player playSources:sources];
+}
+
+
+- (void)playNextSong {
+    //todo: fill in
+}
+
+- (void)playPrevSong {
+    //todo: fill in
+}
+
+
+#pragma mark - Music View
+- (void)setupMusicView {
+    
 }
 
 

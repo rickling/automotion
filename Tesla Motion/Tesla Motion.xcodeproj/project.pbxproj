@@ -46,6 +46,7 @@
 		887140FA19BBA00000FD2476 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		887140FC19BBA00600FD2476 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8871410219BBA04800FD2476 /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rdio.framework; path = "../../../../../Downloads/rdio-ios-2.1.3/Rdio.framework"; sourceTree = "<group>"; };
+		8871410519BBA85C00FD2476 /* ConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerCredentials.h; sourceTree = "<group>"; };
 		88ACDA1519BB9B7F00A728CC /* Tesla Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesla Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88ACDA1819BB9B7F00A728CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +113,14 @@
 			path = rdio;
 			sourceTree = "<group>";
 		};
+		8871410419BBA84E00FD2476 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				8871410519BBA85C00FD2476 /* ConsumerCredentials.h */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
 		88ACDA0C19BB9B7F00A728CC = {
 			isa = PBXGroup;
 			children = (
@@ -151,14 +160,13 @@
 		88ACDA1E19BB9B7F00A728CC /* Tesla Motion */ = {
 			isa = PBXGroup;
 			children = (
-				887140FE19BBA01300FD2476 /* Library */,
-				88ACDA2719BB9B7F00A728CC /* AppDelegate.h */,
-				88ACDA2819BB9B7F00A728CC /* AppDelegate.m */,
 				88ACDA2A19BB9B7F00A728CC /* Main.storyboard */,
 				88ACDA3319BB9B7F00A728CC /* Images.xcassets */,
-				88ACDA1F19BB9B7F00A728CC /* Supporting Files */,
+				8871410419BBA84E00FD2476 /* Credentials */,
+				887140FE19BBA01300FD2476 /* Library */,
 				88ACDA5019BB9C2300A728CC /* MusicViewController.h */,
 				88ACDA5119BB9C2300A728CC /* MusicViewController.m */,
+				88ACDA1F19BB9B7F00A728CC /* Supporting Files */,
 			);
 			path = "Tesla Motion";
 			sourceTree = "<group>";
@@ -166,6 +174,8 @@
 		88ACDA1F19BB9B7F00A728CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				88ACDA2719BB9B7F00A728CC /* AppDelegate.h */,
+				88ACDA2819BB9B7F00A728CC /* AppDelegate.m */,
 				88ACDA2019BB9B7F00A728CC /* Tesla Motion-Info.plist */,
 				88ACDA2119BB9B7F00A728CC /* InfoPlist.strings */,
 				88ACDA2419BB9B7F00A728CC /* main.m */,
