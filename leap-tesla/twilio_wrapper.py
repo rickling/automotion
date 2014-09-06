@@ -16,8 +16,8 @@ class TwilioWrapper(object):
 		self.my_home_number = "+14695855530"
 		self.client = TwilioRestClient(account_sid, auth_token)
 
-	def message_home_on_my_way(self):
-		message = self.client.messages.create(body="I'm on my way", 
+	def message_home(self, message):
+		message = self.client.messages.create(body=message, 
 											  to=self.my_home_number,
 											  from_=self.my_twilio_number)
 		print message.sid
