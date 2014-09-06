@@ -12,7 +12,7 @@ lib_dir = os.path.abspath(os.path.join(src_dir, '../lib'))
 sys.path.insert(0, lib_dir)
 import Leap
 from Leap import CircleGesture, KeyTapGesture, ScreenTapGesture, SwipeGesture
-from tesla_wrapper import TeslaWrapper
+from tesla_vocalizer import TeslaVocalizer
 from twilio_vocalizer import TwilioVocalizer
 import bloomberg_vocalizer
 from math import sqrt
@@ -31,7 +31,7 @@ class SampleListener(Leap.Listener):
 
     def on_init(self, controller):
         print "Initialized"
-        self.tesla = TeslaWrapper()
+        self.tesla = TeslaVocalizer()
         self.twilio = TwilioVocalizer()
 
         self.TAP_GESTURES = {
@@ -88,7 +88,7 @@ class SampleListener(Leap.Listener):
             #print pp
 
             ## STOCKS
-            if hand.grab_strength > 0.9 and hand.palm_velocity < 40:
+            if hand.grab_strength > 0.9 and magnitude(hand.palm_velocity) < 40:
                 for finger in hand.fingers:
                     if finger.type() == Leap.Finger.TYPE_THUMB:
                         if finger.direction[0] < -0.9:
