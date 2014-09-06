@@ -13,6 +13,7 @@
 		887140FB19BBA00000FD2476 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887140FA19BBA00000FD2476 /* Security.framework */; };
 		887140FD19BBA00600FD2476 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887140FC19BBA00600FD2476 /* SystemConfiguration.framework */; };
 		8871410319BBA04800FD2476 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871410219BBA04800FD2476 /* Rdio.framework */; };
+		8871410919BBB99800FD2476 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871410819BBB99800FD2476 /* MediaPlayer.framework */; };
 		88ACDA1919BB9B7F00A728CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1819BB9B7F00A728CC /* Foundation.framework */; };
 		88ACDA1B19BB9B7F00A728CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */; };
 		88ACDA1D19BB9B7F00A728CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1C19BB9B7F00A728CC /* UIKit.framework */; };
@@ -47,6 +48,7 @@
 		887140FC19BBA00600FD2476 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8871410219BBA04800FD2476 /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rdio.framework; path = "../../../../../Downloads/rdio-ios-2.1.3/Rdio.framework"; sourceTree = "<group>"; };
 		8871410519BBA85C00FD2476 /* ConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerCredentials.h; sourceTree = "<group>"; };
+		8871410819BBB99800FD2476 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		88ACDA1519BB9B7F00A728CC /* Tesla Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesla Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88ACDA1819BB9B7F00A728CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8871410919BBB99800FD2476 /* MediaPlayer.framework in Frameworks */,
 				887140FD19BBA00600FD2476 /* SystemConfiguration.framework in Frameworks */,
 				887140FB19BBA00000FD2476 /* Security.framework in Frameworks */,
 				8871410319BBA04800FD2476 /* Rdio.framework in Frameworks */,
@@ -143,6 +146,7 @@
 		88ACDA1719BB9B7F00A728CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8871410819BBB99800FD2476 /* MediaPlayer.framework */,
 				8871410219BBA04800FD2476 /* Rdio.framework */,
 				887140FC19BBA00600FD2476 /* SystemConfiguration.framework */,
 				887140FA19BBA00000FD2476 /* Security.framework */,
