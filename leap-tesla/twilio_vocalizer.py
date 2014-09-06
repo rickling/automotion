@@ -15,10 +15,10 @@ class TwilioVocalizer(object):
             self.wrapper.call_home()
         self.vocalizer.vocalize(statement)
 
-if __name__ == '__main__':
-    main()
-
 def main():
     twilio_vocalizer = TwilioVocalizer()
     twilio_vocalizer.vocalize("messaging", "+14695855530", "I like pie")
     twilio_vocalizer.vocalize("calling", "+14695855530")
+
+if __name__ == '__main__':
+    main()
