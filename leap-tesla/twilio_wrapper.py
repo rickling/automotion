@@ -1,14 +1,14 @@
 from twilio.rest import TwilioRestClient
 
-class TwilioClient(object):
+class TwilioWrapper(object):
 	""" 
 		A client that performs messages and calls to home. 
 
 		Usage:
-		t = TwilioClient()
+		t = TwilioWrapper()
 		t.message_home_on_my_way()
 	"""
-	
+
 	def __init__(self):
 		account_sid = "AC7d41d8405e0fd56b140f21ec1d83700f"
 		auth_token = "1c823da53d96bb417b57b83ab37bbfba"
