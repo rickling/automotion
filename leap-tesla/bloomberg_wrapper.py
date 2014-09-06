@@ -47,9 +47,6 @@ class BloombergWrapper(object):
 
         return prices
 
-# Tests
-# =====
-
 if __name__ == '__main__':
     bbg_wrapper = BloombergWrapper()
     print bb_wrapper.request(["INDU Index", "AAPL Equity", "GOOG Equity"])
