@@ -32,7 +32,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/Yuugu/Documents/DnD/Projects/tesla-motion/venv"
+set -gx VIRTUAL_ENV "/Users/jonathanlin/Documents/projects/mhacks4/tesla-motion/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
