@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		887140F519BB9FEA00FD2476 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887140F419BB9FE900FD2476 /* AudioToolbox.framework */; };
+		887140F719BB9FF100FD2476 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887140F619BB9FF100FD2476 /* CFNetwork.framework */; };
+		887140F919BB9FFB00FD2476 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887140F819BB9FFB00FD2476 /* CoreMedia.framework */; };
+		887140FB19BBA00000FD2476 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887140FA19BBA00000FD2476 /* Security.framework */; };
+		887140FD19BBA00600FD2476 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887140FC19BBA00600FD2476 /* SystemConfiguration.framework */; };
+		8871410319BBA04800FD2476 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871410219BBA04800FD2476 /* Rdio.framework */; };
 		88ACDA1919BB9B7F00A728CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1819BB9B7F00A728CC /* Foundation.framework */; };
 		88ACDA1B19BB9B7F00A728CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */; };
 		88ACDA1D19BB9B7F00A728CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1C19BB9B7F00A728CC /* UIKit.framework */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		887140F419BB9FE900FD2476 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		887140F619BB9FF100FD2476 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		887140F819BB9FFB00FD2476 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		887140FA19BBA00000FD2476 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		887140FC19BBA00600FD2476 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8871410219BBA04800FD2476 /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rdio.framework; path = "../../../../../Downloads/rdio-ios-2.1.3/Rdio.framework"; sourceTree = "<group>"; };
 		88ACDA1519BB9B7F00A728CC /* Tesla Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesla Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88ACDA1819BB9B7F00A728CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,7 +72,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887140FD19BBA00600FD2476 /* SystemConfiguration.framework in Frameworks */,
+				887140FB19BBA00000FD2476 /* Security.framework in Frameworks */,
+				8871410319BBA04800FD2476 /* Rdio.framework in Frameworks */,
+				887140F919BB9FFB00FD2476 /* CoreMedia.framework in Frameworks */,
 				88ACDA1B19BB9B7F00A728CC /* CoreGraphics.framework in Frameworks */,
+				887140F719BB9FF100FD2476 /* CFNetwork.framework in Frameworks */,
+				887140F519BB9FEA00FD2476 /* AudioToolbox.framework in Frameworks */,
 				88ACDA1D19BB9B7F00A728CC /* UIKit.framework in Frameworks */,
 				88ACDA1919BB9B7F00A728CC /* Foundation.framework in Frameworks */,
 			);
@@ -79,6 +97,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		887140FE19BBA01300FD2476 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				887140FF19BBA01300FD2476 /* rdio */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		887140FF19BBA01300FD2476 /* rdio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = rdio;
+			sourceTree = "<group>";
+		};
 		88ACDA0C19BB9B7F00A728CC = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +134,12 @@
 		88ACDA1719BB9B7F00A728CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8871410219BBA04800FD2476 /* Rdio.framework */,
+				887140FC19BBA00600FD2476 /* SystemConfiguration.framework */,
+				887140FA19BBA00000FD2476 /* Security.framework */,
+				887140F819BB9FFB00FD2476 /* CoreMedia.framework */,
+				887140F619BB9FF100FD2476 /* CFNetwork.framework */,
+				887140F419BB9FE900FD2476 /* AudioToolbox.framework */,
 				88ACDA1819BB9B7F00A728CC /* Foundation.framework */,
 				88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */,
 				88ACDA1C19BB9B7F00A728CC /* UIKit.framework */,
@@ -112,6 +151,7 @@
 		88ACDA1E19BB9B7F00A728CC /* Tesla Motion */ = {
 			isa = PBXGroup;
 			children = (
+				887140FE19BBA01300FD2476 /* Library */,
 				88ACDA2719BB9B7F00A728CC /* AppDelegate.h */,
 				88ACDA2819BB9B7F00A728CC /* AppDelegate.m */,
 				88ACDA2A19BB9B7F00A728CC /* Main.storyboard */,
@@ -376,9 +416,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tesla",
+					Motion/Library,
+					"/Users/Yuugu/Downloads/rdio-ios-2.1.3",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tesla Motion/Tesla Motion-Prefix.pch";
 				INFOPLIST_FILE = "Tesla Motion/Tesla Motion-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,9 +436,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tesla",
+					Motion/Library,
+					"/Users/Yuugu/Downloads/rdio-ios-2.1.3",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tesla Motion/Tesla Motion-Prefix.pch";
 				INFOPLIST_FILE = "Tesla Motion/Tesla Motion-Info.plist";
+				"OTHER_LDFLAGS[arch=*]" = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +510,7 @@
 				88ACDA4C19BB9B7F00A728CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88ACDA4D19BB9B7F00A728CC /* Build configuration list for PBXNativeTarget "Tesla MotionTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +519,7 @@
 				88ACDA4F19BB9B7F00A728CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
