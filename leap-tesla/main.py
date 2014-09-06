@@ -13,27 +13,31 @@ sys.path.insert(0, lib_dir)
 import Leap
 from Leap import CircleGesture, KeyTapGesture, ScreenTapGesture, SwipeGesture
 from tesla_wrapper import TeslaWrapper
+from math import sqrt
 
 def do_nothing():
     pass
+
+def magnitude(vector):
+    return sqrt(vector[0]*vector[0] + vector[1]*vector[1] + vector[2]*vector[2])
 
 class SampleListener(Leap.Listener):
     finger_names = ['Thumb', 'Index', 'Middle', 'Ring', 'Pinky']
     bone_names = ['Metacarpal', 'Proximal', 'Intermediate', 'Distal']
     state_names = ['STATE_INVALID', 'STATE_START', 'STATE_UPDATE', 'STATE_END']
 
-    tesla = TeslaWrapper()
-
-    TAP_GESTURES = {
-        Leap.Finger.TYPE_THUMB : do_nothing,
-        Leap.Finger.TYPE_INDEX : tesla.lock_door,
-        Leap.Finger.TYPE_MIDDLE : tesla.unlock_door,
-        Leap.Finger.TYPE_RING : tesla.flash_lights,
-        Leap.Finger.TYPE_PINKY : do_nothing,
-    }
-
     def on_init(self, controller):
         print "Initialized"
+        self.tesla = TeslaWrapper()
+
+        self.TAP_GESTURES = {
+            Leap.Finger.TYPE_THUMB : do_nothing,
+            Leap.Finger.TYPE_INDEX : self.tesla.lock_door,
+            Leap.Finger.TYPE_MIDDLE : self.tesla.unlock_door,
+            Leap.Finger.TYPE_RING : self.tesla.flash_lights,
+            Leap.Finger.TYPE_PINKY : do_nothing,
+        }
+
 
     def on_connect(self, controller):
         print "Connected"
@@ -45,6 +49,7 @@ class SampleListener(Leap.Listener):
         controller.enable_gesture(Leap.Gesture.TYPE_SWIPE);
         controller.config.set("Gesture.Circle.MinRadius", 50.0)
         controller.config.set("Gesture.Circle.MinArc", 1.5)
+        controller.config.set("Gesture.KeyTap.MinDistance", 10.0)
         controller.config.save()
 
     def on_disconnect(self, controller):
@@ -72,12 +77,34 @@ class SampleListener(Leap.Listener):
             # Get the hand's normal vector and direction
             normal = hand.palm_normal
             direction = hand.direction
+            pp = hand.palm_position
+
+            # FLICKING_OFF = True
+
+            #print pp
+
+            #if direction[1] > 0.6 and normal[2] > 0.6:
+            for finger in hand.fingers:
+                if finger.type() == Leap.Finger.TYPE_INDEX:
+                    if not finger.direction[1] > 0.8:
+                        FLICKING_OFF = False
+                    #print finger.direction
+                    # print finger.stabilized_tip_position
+                    #print magnitude(finger.stabilized_tip_position - pp)
+                else:
+                    if not finger.direction[1] < 0:
+                        #FLICKING_OFF = False
+                        pass
+            #print FLICKING_OFF
+
 
             # Calculate the hand's pitch, roll, and yaw angles
 
             # Get arm bone
             arm = hand.arm
 
+
+            """
             # Get fingers
             for finger in hand.fingers:
 
@@ -95,6 +122,7 @@ class SampleListener(Leap.Listener):
                     #     bone.prev_joint,
                     #     bone.next_joint,
                     #     bone.direction)
+            """
 
         # Get tools
         for tool in frame.tools:
@@ -113,7 +141,7 @@ class SampleListener(Leap.Listener):
                 else:
                     clockwiseness = "counterclockwise"
 
-                print clockwiseness
+                # print clockwiseness
 
                 # Calculate the angle swept since the last frame
                 swept_angle = 0
@@ -127,13 +155,21 @@ class SampleListener(Leap.Listener):
                 print "  Swipe id: %d, state: %s, position: %s, direction: %s, speed: %f" % (
                        gesture.id, self.state_names[gesture.state],
                       swipe.position, swipe.direction, swipe.speed)
+                """
+                #Sunroof Control
+                if swipe.direction[1] > 0.9:
+                    self.tesla.open_sun_roof()
+                elif swipe.direction[1] < -0.9:
+                    self.tesla.close_sun_roof()
+                """
 
             if gesture.type == Leap.Gesture.TYPE_KEY_TAP:
                 tap = Leap.KeyTapGesture(gesture)
+                print "tap detected"
 
                 if tap.pointable.is_finger:
                     finger = Leap.Finger(tap.pointable)
-                    SampleListener.TAP_GESTURES[finger.type()]()
+                    #self.TAP_GESTURES[finger.type()]()
 
 
     def state_string(self, state):
