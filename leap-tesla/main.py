@@ -14,7 +14,7 @@ import Leap
 from Leap import CircleGesture, KeyTapGesture, ScreenTapGesture, SwipeGesture
 from tesla_wrapper import TeslaWrapper
 from twilio_wrapper import TwilioWrapper
-import bloomberg_wrapper
+import bloomberg_vocalizer
 from math import sqrt
 import time
 
@@ -92,7 +92,7 @@ class SampleListener(Leap.Listener):
                 for finger in hand.fingers:
                     if finger.type() == Leap.Finger.TYPE_THUMB:
                         if finger.direction[0] < -0.9:
-                            bloomberg_wrapper.main()
+                            bloomberg_vocalizer.main()
 
             #if direction[1] > 0.6 and normal[2] > 0.6:
             for finger in hand.fingers:
