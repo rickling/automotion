@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88ACDA1919BB9B7F00A728CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1819BB9B7F00A728CC /* Foundation.framework */; };
+		88ACDA1B19BB9B7F00A728CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */; };
+		88ACDA1D19BB9B7F00A728CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1C19BB9B7F00A728CC /* UIKit.framework */; };
+		88ACDA2319BB9B7F00A728CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88ACDA2119BB9B7F00A728CC /* InfoPlist.strings */; };
+		88ACDA2519BB9B7F00A728CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACDA2419BB9B7F00A728CC /* main.m */; };
+		88ACDA2919BB9B7F00A728CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACDA2819BB9B7F00A728CC /* AppDelegate.m */; };
+		88ACDA2C19BB9B7F00A728CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88ACDA2A19BB9B7F00A728CC /* Main.storyboard */; };
+		88ACDA3419BB9B7F00A728CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88ACDA3319BB9B7F00A728CC /* Images.xcassets */; };
+		88ACDA3B19BB9B7F00A728CC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA3A19BB9B7F00A728CC /* XCTest.framework */; };
+		88ACDA3C19BB9B7F00A728CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1819BB9B7F00A728CC /* Foundation.framework */; };
+		88ACDA3D19BB9B7F00A728CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ACDA1C19BB9B7F00A728CC /* UIKit.framework */; };
+		88ACDA4519BB9B7F00A728CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88ACDA4319BB9B7F00A728CC /* InfoPlist.strings */; };
+		88ACDA4719BB9B7F00A728CC /* Tesla_MotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACDA4619BB9B7F00A728CC /* Tesla_MotionTests.m */; };
+		88ACDA5219BB9C2300A728CC /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88ACDA5119BB9C2300A728CC /* MusicViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88ACDA3E19BB9B7F00A728CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88ACDA0D19BB9B7F00A728CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88ACDA1419BB9B7F00A728CC;
+			remoteInfo = "Tesla Motion";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		88ACDA1519BB9B7F00A728CC /* Tesla Motion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesla Motion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88ACDA1819BB9B7F00A728CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		88ACDA1C19BB9B7F00A728CC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		88ACDA2019BB9B7F00A728CC /* Tesla Motion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tesla Motion-Info.plist"; sourceTree = "<group>"; };
+		88ACDA2219BB9B7F00A728CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		88ACDA2419BB9B7F00A728CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88ACDA2619BB9B7F00A728CC /* Tesla Motion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tesla Motion-Prefix.pch"; sourceTree = "<group>"; };
+		88ACDA2719BB9B7F00A728CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88ACDA2819BB9B7F00A728CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88ACDA2B19BB9B7F00A728CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88ACDA3319BB9B7F00A728CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		88ACDA3919BB9B7F00A728CC /* Tesla MotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tesla MotionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88ACDA3A19BB9B7F00A728CC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		88ACDA4219BB9B7F00A728CC /* Tesla MotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tesla MotionTests-Info.plist"; sourceTree = "<group>"; };
+		88ACDA4419BB9B7F00A728CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		88ACDA4619BB9B7F00A728CC /* Tesla_MotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tesla_MotionTests.m; sourceTree = "<group>"; };
+		88ACDA5019BB9C2300A728CC /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		88ACDA5119BB9C2300A728CC /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88ACDA1219BB9B7F00A728CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88ACDA1B19BB9B7F00A728CC /* CoreGraphics.framework in Frameworks */,
+				88ACDA1D19BB9B7F00A728CC /* UIKit.framework in Frameworks */,
+				88ACDA1919BB9B7F00A728CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88ACDA3619BB9B7F00A728CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88ACDA3B19BB9B7F00A728CC /* XCTest.framework in Frameworks */,
+				88ACDA3D19BB9B7F00A728CC /* UIKit.framework in Frameworks */,
+				88ACDA3C19BB9B7F00A728CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88ACDA0C19BB9B7F00A728CC = {
+			isa = PBXGroup;
+			children = (
+				88ACDA1E19BB9B7F00A728CC /* Tesla Motion */,
+				88ACDA4019BB9B7F00A728CC /* Tesla MotionTests */,
+				88ACDA1719BB9B7F00A728CC /* Frameworks */,
+				88ACDA1619BB9B7F00A728CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88ACDA1619BB9B7F00A728CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88ACDA1519BB9B7F00A728CC /* Tesla Motion.app */,
+				88ACDA3919BB9B7F00A728CC /* Tesla MotionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88ACDA1719BB9B7F00A728CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88ACDA1819BB9B7F00A728CC /* Foundation.framework */,
+				88ACDA1A19BB9B7F00A728CC /* CoreGraphics.framework */,
+				88ACDA1C19BB9B7F00A728CC /* UIKit.framework */,
+				88ACDA3A19BB9B7F00A728CC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88ACDA1E19BB9B7F00A728CC /* Tesla Motion */ = {
+			isa = PBXGroup;
+			children = (
+				88ACDA2719BB9B7F00A728CC /* AppDelegate.h */,
+				88ACDA2819BB9B7F00A728CC /* AppDelegate.m */,
+				88ACDA2A19BB9B7F00A728CC /* Main.storyboard */,
+				88ACDA3319BB9B7F00A728CC /* Images.xcassets */,
+				88ACDA1F19BB9B7F00A728CC /* Supporting Files */,
+				88ACDA5019BB9C2300A728CC /* MusicViewController.h */,
+				88ACDA5119BB9C2300A728CC /* MusicViewController.m */,
+			);
+			path = "Tesla Motion";
+			sourceTree = "<group>";
+		};
+		88ACDA1F19BB9B7F00A728CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88ACDA2019BB9B7F00A728CC /* Tesla Motion-Info.plist */,
+				88ACDA2119BB9B7F00A728CC /* InfoPlist.strings */,
+				88ACDA2419BB9B7F00A728CC /* main.m */,
+				88ACDA2619BB9B7F00A728CC /* Tesla Motion-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88ACDA4019BB9B7F00A728CC /* Tesla MotionTests */ = {
+			isa = PBXGroup;
+			children = (
+				88ACDA4619BB9B7F00A728CC /* Tesla_MotionTests.m */,
+				88ACDA4119BB9B7F00A728CC /* Supporting Files */,
+			);
+			path = "Tesla MotionTests";
+			sourceTree = "<group>";
+		};
+		88ACDA4119BB9B7F00A728CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88ACDA4219BB9B7F00A728CC /* Tesla MotionTests-Info.plist */,
+				88ACDA4319BB9B7F00A728CC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88ACDA1419BB9B7F00A728CC /* Tesla Motion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88ACDA4A19BB9B7F00A728CC /* Build configuration list for PBXNativeTarget "Tesla Motion" */;
+			buildPhases = (
+				88ACDA1119BB9B7F00A728CC /* Sources */,
+				88ACDA1219BB9B7F00A728CC /* Frameworks */,
+				88ACDA1319BB9B7F00A728CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tesla Motion";
+			productName = "Tesla Motion";
+			productReference = 88ACDA1519BB9B7F00A728CC /* Tesla Motion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88ACDA3819BB9B7F00A728CC /* Tesla MotionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88ACDA4D19BB9B7F00A728CC /* Build configuration list for PBXNativeTarget "Tesla MotionTests" */;
+			buildPhases = (
+				88ACDA3519BB9B7F00A728CC /* Sources */,
+				88ACDA3619BB9B7F00A728CC /* Frameworks */,
+				88ACDA3719BB9B7F00A728CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88ACDA3F19BB9B7F00A728CC /* PBXTargetDependency */,
+			);
+			name = "Tesla MotionTests";
+			productName = "Tesla MotionTests";
+			productReference = 88ACDA3919BB9B7F00A728CC /* Tesla MotionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88ACDA0D19BB9B7F00A728CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Rick Ling";
+				TargetAttributes = {
+					88ACDA3819BB9B7F00A728CC = {
+						TestTargetID = 88ACDA1419BB9B7F00A728CC;
+					};
+				};
+			};
+			buildConfigurationList = 88ACDA1019BB9B7F00A728CC /* Build configuration list for PBXProject "Tesla Motion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88ACDA0C19BB9B7F00A728CC;
+			productRefGroup = 88ACDA1619BB9B7F00A728CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88ACDA1419BB9B7F00A728CC /* Tesla Motion */,
+				88ACDA3819BB9B7F00A728CC /* Tesla MotionTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88ACDA1319BB9B7F00A728CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88ACDA3419BB9B7F00A728CC /* Images.xcassets in Resources */,
+				88ACDA2319BB9B7F00A728CC /* InfoPlist.strings in Resources */,
+				88ACDA2C19BB9B7F00A728CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88ACDA3719BB9B7F00A728CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88ACDA4519BB9B7F00A728CC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88ACDA1119BB9B7F00A728CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88ACDA5219BB9C2300A728CC /* MusicViewController.m in Sources */,
+				88ACDA2919BB9B7F00A728CC /* AppDelegate.m in Sources */,
+				88ACDA2519BB9B7F00A728CC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88ACDA3519BB9B7F00A728CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88ACDA4719BB9B7F00A728CC /* Tesla_MotionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88ACDA3F19BB9B7F00A728CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88ACDA1419BB9B7F00A728CC /* Tesla Motion */;
+			targetProxy = 88ACDA3E19BB9B7F00A728CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88ACDA2119BB9B7F00A728CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88ACDA2219BB9B7F00A728CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		88ACDA2A19BB9B7F00A728CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88ACDA2B19BB9B7F00A728CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88ACDA4319BB9B7F00A728CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88ACDA4419BB9B7F00A728CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88ACDA4819BB9B7F00A728CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		88ACDA4919BB9B7F00A728CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88ACDA4B19BB9B7F00A728CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tesla Motion/Tesla Motion-Prefix.pch";
+				INFOPLIST_FILE = "Tesla Motion/Tesla Motion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		88ACDA4C19BB9B7F00A728CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tesla Motion/Tesla Motion-Prefix.pch";
+				INFOPLIST_FILE = "Tesla Motion/Tesla Motion-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		88ACDA4E19BB9B7F00A728CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tesla Motion.app/Tesla Motion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tesla Motion/Tesla Motion-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tesla MotionTests/Tesla MotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		88ACDA4F19BB9B7F00A728CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tesla Motion.app/Tesla Motion";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tesla Motion/Tesla Motion-Prefix.pch";
+				INFOPLIST_FILE = "Tesla MotionTests/Tesla MotionTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88ACDA1019BB9B7F00A728CC /* Build configuration list for PBXProject "Tesla Motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88ACDA4819BB9B7F00A728CC /* Debug */,
+				88ACDA4919BB9B7F00A728CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88ACDA4A19BB9B7F00A728CC /* Build configuration list for PBXNativeTarget "Tesla Motion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88ACDA4B19BB9B7F00A728CC /* Debug */,
+				88ACDA4C19BB9B7F00A728CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		88ACDA4D19BB9B7F00A728CC /* Build configuration list for PBXNativeTarget "Tesla MotionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88ACDA4E19BB9B7F00A728CC /* Debug */,
+				88ACDA4F19BB9B7F00A728CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88ACDA0D19BB9B7F00A728CC /* Project object */;
+}
