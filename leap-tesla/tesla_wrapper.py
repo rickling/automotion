@@ -2,7 +2,15 @@ import requests
 import json
 
 class TeslaWrapper(object):
-	""" Python Wrapper for the Tesla API """
+	""" 
+		Python Wrapper for the Tesla API.
+
+		Usage:
+		t = TeslaWrapper()
+		t.login()
+		t.set_vehicle_id(123)
+	"""
+
 	def __init__(self, is_local=True):
 		self.url = "http://localhost:8080/mockTesla/"
 		self.vehicle_id = None
@@ -17,6 +25,7 @@ class TeslaWrapper(object):
 		self.output(r)
 
 	def output(self, response):
+		""" Outputs the httpresponse in a pretty format. """
 		try:
 			output = response.json()
 		except:
@@ -36,6 +45,7 @@ class TeslaWrapper(object):
 
 	# Vehicle Statuses
 	def get_mobile_enabled(self):
+		""" Returns Success if mobile access is enabled on the vehicle """
 		if not self.vehicle_id:
 			raise ValueError("Please set the vehicle id")
 		path = "vehicles/%d/mobile_enabled" % self.vehicle_id 
