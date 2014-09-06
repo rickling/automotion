@@ -17,9 +17,10 @@ class BloombergVocalizer(object):
 
         self.vocalizer.vocalize(statement)
 
-if __name__ == '__main__':
-    main()
-
 def main():
     bbg_vocalizer = BloombergVocalizer()
     print bbg_vocalizer.vocalize(["INDU Index", "AAPL Equity", "GOOG Equity"])
+    
+if __name__ == '__main__':
+    main()
+
