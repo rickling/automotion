@@ -17,6 +17,8 @@ from twilio_vocalizer import TwilioVocalizer
 import bloomberg_vocalizer
 from math import sqrt
 import time
+import datetime
+from datetime import timedelta
 
 from websocket import create_connection
 
@@ -51,6 +53,8 @@ class SampleListener(Leap.Listener):
         }
 
         self.ws = create_connection("ws://localhost:9000")
+
+        self.lastAction = datetime.datetime.now()
 
     def on_connect(self, controller):
         print "Connected"
@@ -132,10 +136,11 @@ class SampleListener(Leap.Listener):
                 elif finger.type() == Leap.Finger.TYPE_THUMB:
                     if finger.direction[1] > 0.75:
                         THUMB = True
-            if PINKY and THUMB:
-                print "Making a call"
-                self.twilio.vocalize("calling", "+14695855530")
-                time.sleep(2)
+            if PINKY and THUMB and magnitude(hand.palm_velocity) < 60:
+                if datetime.datetime.now() > self.lastAction + timedelta(seconds=2):
+                    print "Making a call"
+                    self.twilio.vocalize("calling", "+14695855530")
+                    self.lastAction = datetime.datetime.now()
 
 
             """
@@ -176,12 +181,13 @@ class SampleListener(Leap.Listener):
                     clockwiseness = "counterclockwise"
 
                 if circle.progress > 1.0:
-                    if clockwiseness == "clockwise":
-                        self.ws.send(RDIO_VOL_UP)
-                    else:
-                        self.ws.send(RDIO_VOL_DOWN)
-                    time.sleep(0.5)
-                    print clockwiseness
+                    if datetime.datetime.now() > self.lastAction + timedelta(milliseconds=250):
+                        if clockwiseness == "clockwise":
+                            self.ws.send(RDIO_VOL_UP)
+                        else:
+                            self.ws.send(RDIO_VOL_DOWN)
+                        self.lastAction = datetime.datetime.now()
+                        print clockwiseness
 
                 # Calculate the angle swept since the last frame
                 swept_angle = 0
@@ -197,35 +203,33 @@ class SampleListener(Leap.Listener):
                 #      swipe.position, swipe.direction, swipe.speed)
                 
                 #Sunroof Control
-                if swipe.direction[1] > 0.9:
-                    print "opening sunroof"
-                    self.tesla.open_sun_roof()
-                    time.sleep(2)
-                elif swipe.direction[1] < -0.9:
-                    print "closing sunroof"
-                    self.tesla.close_sun_roof()
-                    time.sleep(2)
-                elif swipe.direction[2] < -0.9:
-                    print "Play/Pause"
-                    self.ws.send(RDIO_PLAY_PAUSE)
-                    time.sleep(2)
-                elif swipe.direction[0] > 0.9:
-                    print "Next Song"
-                    self.ws.send(RDIO_NEXT)
-                    time.sleep(2)
-                elif swipe.direction[0] < -0.9:
-                    print "Prev Song"
-                    self.ws.send(RDIO_PREV)
-                    time.sleep(2)
+                if datetime.datetime.now() > self.lastAction + timedelta(seconds=2):
+                    if swipe.direction[1] > 0.9:
+                        print "opening sunroof"
+                        self.tesla.open_sun_roof()
+                    elif swipe.direction[1] < -0.9:
+                        print "closing sunroof"
+                        self.tesla.close_sun_roof()
+                    elif swipe.direction[2] < -0.9:
+                        print "Play/Pause"
+                        self.ws.send(RDIO_PLAY_PAUSE)
+                    elif swipe.direction[0] > 0.9:
+                        print "Next Song"
+                        self.ws.send(RDIO_NEXT)
+                    elif swipe.direction[0] < -0.9:
+                        print "Prev Song"
+                        self.ws.send(RDIO_PREV)
+                    self.lastAction = datetime.datetime.now()
 
             if gesture.type == Leap.Gesture.TYPE_KEY_TAP:
                 tap = Leap.KeyTapGesture(gesture)
                 print "tap detected"
 
                 if tap.pointable.is_finger:
-                    finger = Leap.Finger(tap.pointable)
-                    self.TAP_GESTURES[finger.type()]()
-                    time.sleep(2)
+                    if datetime.datetime.now() > self.lastAction + timedelta(seconds=2):
+                        finger = Leap.Finger(tap.pointable)
+                        self.TAP_GESTURES[finger.type()]()
+                        self.lastAction = datetime.datetime.now()
 
 
     def state_string(self, state):

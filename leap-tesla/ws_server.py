@@ -11,7 +11,8 @@ class MyServerProtocol(WebSocketServerProtocol):
       self.factory.register(self)
 
    def onMessage(self, payload, isBinary):
-      if isBinary:
+      if not isBinary:
+         print "Message sent " + payload
          self.factory.broadcast(payload)
 
    def onClose(self, wasClean, code, reason):

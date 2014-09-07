@@ -88,14 +88,18 @@
         [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
         self.isPlaying = YES;
     }
+    
+    sleep(2);
 }
 
 - (void)playNextSong {
     [self.rdio.player next];
+    sleep(2);
 }
 
 - (void)playPrevSong {
     [self.rdio.player previous];
+    sleep(2);
 }
 
 - (void)increaseVolume {
@@ -111,6 +115,7 @@
     }
     [volumeViewSlider setValue:self.currentVolume animated:YES];
     [volumeViewSlider sendActionsForControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)decreaseVolume {
@@ -133,7 +138,7 @@
     self.webSocket.delegate = nil;
     self.webSocket = nil;
     
-    NSString *urlString = @"ws://35.2.69.35:9000";
+    NSString *urlString = @"ws://35.2.81.132:9000";
     SRWebSocket *newWebSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:urlString]];
     newWebSocket.delegate = self;
     
@@ -166,6 +171,12 @@
             break;
         case RDIO_PREV:
             [self playPrevSong];
+            break;
+        case RDIO_VOL_UP:
+            [self increaseVolume];
+            break;
+        case RDIO_VOL_DOWN:
+            [self decreaseVolume];
             break;
     }
 }
