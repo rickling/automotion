@@ -11,6 +11,11 @@
 #import "MediaPlayer/MPVolumeView.h"
 #import "MusicViewController.h"
 #import "SRWebSocket.h"
+#define RDIO_PLAY_PAUSE 0
+#define RDIO_NEXT 1
+#define RDIO_PREV 2
+#define RDIO_VOL_UP 3
+#define RDIO_VOL_DOWN 4
 
 @interface MusicViewController ()<SRWebSocketDelegate>
 
@@ -18,6 +23,7 @@
 @property (nonatomic) BOOL isPlaying;
 @property (nonatomic, strong) NSMutableArray *topChartSongs;
 @property (nonatomic, strong) SRWebSocket *webSocket;
+
 
 @end
 
@@ -94,7 +100,7 @@
     self.webSocket.delegate = nil;
     self.webSocket = nil;
     
-    NSString *urlString = @"ws://localhost:8080";
+    NSString *urlString = @"ws://35.2.69.35:9000";
     SRWebSocket *newWebSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:urlString]];
     newWebSocket.delegate = self;
     
@@ -118,7 +124,19 @@
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    
     NSLog(@"%@", message);
+    switch ([message intValue]) {
+        case RDIO_PLAY_PAUSE:
+            [self playPausePressed];
+            break;
+        case RDIO_NEXT:
+            [self playNextSong];
+            break;
+        case RDIO_PREV:
+            [self playPrevSong];
+            break;
+    }
 }
 
 @end
