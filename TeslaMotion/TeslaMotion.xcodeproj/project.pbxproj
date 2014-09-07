@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590BA87E0BC14917A91CF98C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9C55CC4CD449AEB519B707 /* libPods.a */; };
 		8822977419BBFC960098467D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977319BBFC960098467D /* Foundation.framework */; };
 		8822977619BBFC960098467D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977519BBFC960098467D /* CoreGraphics.framework */; };
 		8822977819BBFC960098467D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977719BBFC960098467D /* UIKit.framework */; };
@@ -30,6 +31,8 @@
 		882297C219BBFD3F0098467D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297C119BBFD3F0098467D /* SystemConfiguration.framework */; };
 		882297C419BBFD430098467D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297C319BBFD430098467D /* MediaPlayer.framework */; };
 		882297C619BBFD690098467D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297C519BBFD690098467D /* libicucore.dylib */; };
+		885947A019BC278E00268384 /* clgbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8859479F19BC278E00268384 /* clgbackground.jpg */; };
+		8859484119BC2AF800268384 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 885947E319BC2AF700268384 /* FXBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A9C55CC4CD449AEB519B707 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8822977019BBFC960098467D /* TeslaMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8822977319BBFC960098467D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8822977519BBFC960098467D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,6 +78,10 @@
 		882297C119BBFD3F0098467D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		882297C319BBFD430098467D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		882297C519BBFD690098467D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		8859479F19BC278E00268384 /* clgbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clgbackground.jpg; sourceTree = "<group>"; };
+		885947E219BC2AF700268384 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		885947E319BC2AF700268384 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		FCA33E8C160C4F3B8399B01D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 				882297B819BBFD0F0098467D /* Rdio.framework in Frameworks */,
 				8822977819BBFC960098467D /* UIKit.framework in Frameworks */,
 				8822977419BBFC960098467D /* Foundation.framework in Frameworks */,
+				590BA87E0BC14917A91CF98C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +124,7 @@
 				8822979B19BBFC960098467D /* TeslaMotionTests */,
 				8822977219BBFC960098467D /* Frameworks */,
 				8822977119BBFC960098467D /* Products */,
+				FCA33E8C160C4F3B8399B01D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +152,7 @@
 				8822977519BBFC960098467D /* CoreGraphics.framework */,
 				8822977719BBFC960098467D /* UIKit.framework */,
 				8822979519BBFC960098467D /* XCTest.framework */,
+				7A9C55CC4CD449AEB519B707 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 		8822977919BBFC960098467D /* TeslaMotion */ = {
 			isa = PBXGroup;
 			children = (
+				8859479F19BC278E00268384 /* clgbackground.jpg */,
 				882297AB19BBFCEC0098467D /* Library */,
 				882297B219BBFCEC0098467D /* MusicViewController.h */,
 				882297B119BBFCEC0098467D /* MusicViewController.m */,
@@ -194,6 +206,7 @@
 		882297AB19BBFCEC0098467D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				885947A119BC2AF700268384 /* FXBlurView */,
 				882297AC19BBFCEC0098467D /* rdio */,
 				882297AD19BBFCEC0098467D /* SocketRocket */,
 			);
@@ -225,6 +238,23 @@
 			path = Credentials;
 			sourceTree = "<group>";
 		};
+		885947A119BC2AF700268384 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				885947E119BC2AF700268384 /* FXBlurView */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		885947E119BC2AF700268384 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				885947E219BC2AF700268384 /* FXBlurView.h */,
+				885947E319BC2AF700268384 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 882297A519BBFC960098467D /* Build configuration list for PBXNativeTarget "TeslaMotion" */;
 			buildPhases = (
+				C12565EDFFAB4ECEB04A6431 /* Check Pods Manifest.lock */,
 				8822976C19BBFC960098467D /* Sources */,
 				8822976D19BBFC960098467D /* Frameworks */,
 				8822976E19BBFC960098467D /* Resources */,
+				F5C2D42B9E5542D4934769FB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +335,7 @@
 			files = (
 				8822978F19BBFC960098467D /* Images.xcassets in Resources */,
 				8822977E19BBFC960098467D /* InfoPlist.strings in Resources */,
+				885947A019BC278E00268384 /* clgbackground.jpg in Resources */,
 				8822978719BBFC960098467D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +350,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C12565EDFFAB4ECEB04A6431 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5C2D42B9E5542D4934769FB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8822976C19BBFC960098467D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -326,6 +392,7 @@
 				882297B519BBFCEC0098467D /* SRWebSocket.m in Sources */,
 				8822978419BBFC960098467D /* AppDelegate.m in Sources */,
 				8822978019BBFC960098467D /* main.m in Sources */,
+				8859484119BC2AF800268384 /* FXBlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +514,7 @@
 		};
 		882297A619BBFC960098467D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA33E8C160C4F3B8399B01D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -465,6 +533,7 @@
 		};
 		882297A719BBFC960098467D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA33E8C160C4F3B8399B01D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -540,6 +609,7 @@
 				882297A719BBFC960098467D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		882297A819BBFC960098467D /* Build configuration list for PBXNativeTarget "TeslaMotionTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +618,7 @@
 				882297AA19BBFC960098467D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,4 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *prevButton;
 @property (weak, nonatomic) IBOutlet UIView *volumeViewContainer;
 
+@property (weak, nonatomic) IBOutlet UIImageView *trackImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *circleTrackImageView;
+
 @end

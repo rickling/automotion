@@ -6,12 +6,15 @@
 //  Copyright (c) 2014 Rick Ling. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import <Rdio/Rdio.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import "ConsumerCredentials.h"
+#import "FXBlurView.h"
 #import "MediaPlayer/MPVolumeView.h"
 #import "MusicViewController.h"
 #import "SRWebSocket.h"
+
 #define RDIO_PLAY_PAUSE 0
 #define RDIO_NEXT 1
 #define RDIO_PREV 2
@@ -23,6 +26,9 @@
 @property (nonatomic, strong) Rdio *rdio;
 @property (nonatomic) BOOL isPlaying;
 @property (nonatomic, strong) NSMutableArray *topChartSongs;
+@property (nonatomic, strong) NSMutableArray *topChartSongsImageURL;
+@property (nonatomic, strong) NSMutableArray *topChartSongNames;
+@property (nonatomic, strong) NSMutableArray *topChartSongArtists;
 @property (nonatomic, strong) SRWebSocket *webSocket;
 @property (nonatomic, strong) MPVolumeView *volumeView;
 @property (nonatomic) float currentVolume;
@@ -36,6 +42,7 @@
     [super viewDidLoad];
     self.isPlaying = NO;
     self.currentVolume = 1.0f;
+    [self.playButton setBackgroundImage:[UIImage imageNamed:@"pause_button"] forState:UIControlStateNormal];
     [self setupRdio];
     [self setupMusicView];
     [self connectWebSocket];
@@ -49,22 +56,56 @@
                                                                     loadedAction:@selector(updateTopChartSongs:didLoadData:)
                                                                     failedAction:@selector(updateTopChartSongs:didFail:)];
     [self.rdio callAPIMethod:@"getTopCharts" withParameters:@{@"type": @"Track"} delegate:trackDelegate];
+    
+
 }
 
 - (void)updateTopChartSongs:(RDAPIRequest *)request didLoadData:(NSDictionary *)data {
     NSArray *topChartArray = (NSArray *)data;
     self.topChartSongs = [[NSMutableArray alloc] init];
+    self.topChartSongsImageURL = [[NSMutableArray alloc] init];
+    self.topChartSongNames = [[NSMutableArray alloc] init];
+    self.topChartSongArtists = [[NSMutableArray alloc] init];
+    int i = 0;
     for (NSDictionary *tracks in topChartArray) {
-        
-        [self.topChartSongs addObject:tracks[@"key"]];
+        i++;
+        if (i > 5) {
+            [self.topChartSongs addObject:tracks[@"key"]];
+            [self.topChartSongsImageURL addObject:tracks[@"icon400"]];
+            [self.topChartSongNames addObject:tracks[@"name"]];
+            [self.topChartSongArtists addObject:tracks[@"artist"]];
+        }
     }
-    [self.rdio.player playSources:self.topChartSongs];
     [self playPausePressed];
-    
+    [self.rdio.player playSources:self.topChartSongs];
+    self.artistNameLabel.text = self.topChartSongArtists[[self.rdio.player currentTrackIndex]];
+    self.songNameLabel.text = self.topChartSongNames[[self.rdio.player currentTrackIndex]];
+    [self updateTrackImageView:[self.rdio.player currentTrackIndex]];
 }
 
 - (void)updateTopChartSongs:(RDAPIRequest *)request didFail:(NSError *)error {
     NSLog(@"error: %@", error);
+}
+
+- (void)updateTrackImageView:(int)index {
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.topChartSongsImageURL[index]]];
+    
+    UIImage *result = [UIImage imageWithData:imageData];
+    UIImage *blurredBg = [result blurredImageWithRadius:2 iterations:5 tintColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0]];
+    self.trackImageView.image = blurredBg;
+    
+    CALayer *imageLayer = [[UIImageView alloc] initWithImage:result].layer;
+    [imageLayer setCornerRadius:200];
+    [imageLayer setBorderWidth:1];
+    [imageLayer setMasksToBounds:YES];
+    UIGraphicsBeginImageContext([imageLayer frame].size);
+    
+    [imageLayer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    self.circleTrackImageView.image = outputImage;
+    
 }
 
 
@@ -81,11 +122,11 @@
 - (void)playPausePressed {
     if (self.isPlaying) {
         [self.rdio.player togglePause];
-        [self.playButton setTitle:@"Play" forState:UIControlStateNormal];
+        [self.playButton setBackgroundImage:[UIImage imageNamed:@"play_button"] forState:UIControlStateNormal];
         self.isPlaying = NO;
     } else {
         [self.rdio.player play];
-        [self.playButton setTitle:@"Pause" forState:UIControlStateNormal];
+        [self.playButton setBackgroundImage:[UIImage imageNamed:@"pause_button"] forState:UIControlStateNormal];
         self.isPlaying = YES;
     }
     
@@ -94,11 +135,18 @@
 
 - (void)playNextSong {
     [self.rdio.player next];
+    [self updateTrackImageView:[self.rdio.player currentTrackIndex]];
+    self.artistNameLabel.text = self.topChartSongArtists[[self.rdio.player currentTrackIndex]];
+    self.songNameLabel.text = self.topChartSongNames[[self.rdio.player currentTrackIndex]];
+    NSLog(@"%@", [self.rdio.player currentTrack]);
     sleep(2);
 }
 
 - (void)playPrevSong {
     [self.rdio.player previous];
+    [self updateTrackImageView:[self.rdio.player currentTrackIndex]];
+    self.artistNameLabel.text = self.topChartSongArtists[[self.rdio.player currentTrackIndex]];
+    self.songNameLabel.text = self.topChartSongNames[[self.rdio.player currentTrackIndex]];
     sleep(2);
 }
 

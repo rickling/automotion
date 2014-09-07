@@ -1,0 +1,10 @@
+PODS:
+  - CRNavigationController (1.1)
+
+DEPENDENCIES:
+  - CRNavigationController
+
+SPEC CHECKSUMS:
+  CRNavigationController: e6f95ddaff76444a7083d546d5b9f08f915c6073
+
+COCOAPODS: 0.33.1
