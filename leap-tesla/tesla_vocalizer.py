@@ -3,7 +3,7 @@ from tesla_wrapper import TeslaWrapper
 
 class TeslaVocalizer(object):
 	def __init__(self):
-		self.volcalizer = Vocalizer()
+		self.vocalizer = Vocalizer()
 		self.wrapper = TeslaWrapper()
 
 	def response_success_checker(self, response):
@@ -16,72 +16,72 @@ class TeslaVocalizer(object):
 	def get_mobile_enabled(self):
 		r = self.wrapper.get_mobile_enabled()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Mobile access is enabled.")
+			self.vocalizer.vocalize("Mobile access is enabled.")
 		else:
-			self.volcalizer.vocalize("Mobile access is not enabled.")
+			self.vocalizer.vocalize("Mobile access is not enabled.")
 
 	def open_charge_port_door(self):
 		r = self.wrapper.open_charge_port_door()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Opening charge port door.")
+			self.vocalizer.vocalize("Opening charge port door.")
 		else:
-			self.volcalizer.vocalize("Unable to open charge port door.")
+			self.vocalizer.vocalize("Unable to open charge port door.")
 
 	def start_charge(self):
 		r = self.wrapper.start_charge()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Starting to charge the vehicle.")
+			self.vocalizer.vocalize("Starting to charge the vehicle.")
 		else:
-			self.volcalizer.vocalize("Unable to charge the vehicle.")
+			self.vocalizer.vocalize("Unable to charge the vehicle.")
 
 	def stop_charge(self):
 		r = self.wrapper.stop_charge()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Stopping charging of vehicle.")
+			self.vocalizer.vocalize("Stopping charging of vehicle.")
 		else:
-			self.volcalizer.vocalize("Unable to stop charging the vehicle.")
+			self.vocalizer.vocalize("Unable to stop charging the vehicle.")
 
 	def flash_lights(self):
 		r = self.wrapper.flash_lights()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Flashing the lights once.")
+			self.vocalizer.vocalize("Flashing the lights once.")
 		else:
-			self.volcalizer.vocalize("Unable to flash the lights.")
+			self.vocalizer.vocalize("Unable to flash the lights.")
 
 	def honk_horn(self):
 		r = self.wrapper.honk_horn()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Honking the horn.")
+			self.vocalizer.vocalize("Honking the horn.")
 		else:
-			self.volcalizer.vocalize("Unable to honk the horn.")
+			self.vocalizer.vocalize("Unable to honk the horn.")
 
 	def unlock_door(self):
 		r = self.wrapper.unlock_door()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Unlocking the doors.")
+			self.vocalizer.vocalize("Unlocking the doors.")
 		else:
-			self.volcalizer.vocalize("Unable to unlock the doors.")
+			self.vocalizer.vocalize("Unable to unlock the doors.")
 
 	def lock_door(self):
 		r = self.wrapper.lock_door()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Locking the doors.")
+			self.vocalizer.vocalize("Locking the doors.")
 		else:
-			self.volcalizer.vocalize("Unable to lock the doors.")
+			self.vocalizer.vocalize("Unable to lock the doors.")
 
 	def open_sun_roof(self):
 		r = self.wrapper.open_sun_roof()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Opening the sun roof.")
+			self.vocalizer.vocalize("Opening the sun roof.")
 		else:
-			self.volcalizer.vocalize("Unable to open the sun roof.")
+			self.vocalizer.vocalize("Unable to open the sun roof.")
 
 	def close_sun_roof(self):
 		r = self.wrapper.close_sun_roof()
 		if self.response_success_checker(r):
-			self.volcalizer.vocalize("Closing the sun roof.")
+			self.vocalizer.vocalize("Closing the sun roof.")
 		else:
-			self.volcalizer.vocalize("Unable to close the sun roof.")
+			self.vocalizer.vocalize("Unable to close the sun roof.")
 
 def main():
 	t = TeslaVocalizer()
