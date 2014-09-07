@@ -12,12 +12,7 @@ class MyServerProtocol(WebSocketServerProtocol):
 
    def onMessage(self, payload, isBinary):
       if isBinary:
-         print("Binary message received: {} bytes".format(len(payload)))
-      else:
-         print("Text message received: {}".format(payload.decode('utf8')))
-
-      ## echo back message verbatim
-      self.factory.broadcast(payload)
+         self.factory.broadcast(payload)
 
    def onClose(self, wasClean, code, reason):
       print("WebSocket connection closed: {}".format(reason))

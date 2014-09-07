@@ -177,9 +177,9 @@ class SampleListener(Leap.Listener):
 
                 if circle.progress > 1.0:
                     if clockwiseness == "clockwise":
-                        pass
+                        self.ws.send(RDIO_VOL_UP)
                     else:
-                        pass
+                        self.ws.send(RDIO_VOL_DOWN)
                     time.sleep(0.5)
                     print clockwiseness
 
