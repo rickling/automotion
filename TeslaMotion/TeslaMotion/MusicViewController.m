@@ -7,6 +7,7 @@
 //
 
 #import <Rdio/Rdio.h>
+#import <MediaPlayer/MediaPlayer.h>
 #import "ConsumerCredentials.h"
 #import "MediaPlayer/MPVolumeView.h"
 #import "MusicViewController.h"
@@ -18,6 +19,8 @@
 @property (nonatomic) BOOL isPlaying;
 @property (nonatomic, strong) NSMutableArray *topChartSongs;
 @property (nonatomic, strong) SRWebSocket *webSocket;
+@property (nonatomic, strong) MPVolumeView *volumeView;
+@property (nonatomic) float currentVolume;
 
 @end
 
@@ -26,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.isPlaying = NO;
+    self.currentVolume = 1.0f;
     [self setupRdio];
     [self setupMusicView];
     [self connectWebSocket];
@@ -60,8 +64,8 @@
 
 #pragma mark - Music View
 - (void)setupMusicView {
-    MPVolumeView *myVolumeView = [[MPVolumeView alloc] initWithFrame: self.volumeViewContainer.bounds];
-    [self.volumeViewContainer addSubview: myVolumeView];
+    self.volumeView = [[MPVolumeView alloc] initWithFrame: self.volumeViewContainer.bounds];
+    [self.volumeViewContainer addSubview: self.volumeView];
     [self.playButton addTarget:self action:@selector(playPausePressed) forControlEvents:UIControlEventTouchUpInside];
     [self.nextButton addTarget:self action:@selector(playNextSong) forControlEvents:UIControlEventTouchUpInside];
     [self.prevButton addTarget:self action:@selector(playPrevSong) forControlEvents:UIControlEventTouchUpInside];
@@ -88,6 +92,35 @@
     [self.rdio.player previous];
 }
 
+- (void)increaseVolume {
+    UISlider* volumeViewSlider = nil;
+    for (UIView *view in [self.volumeView subviews]){
+        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
+            volumeViewSlider = (UISlider*)view;
+            break;
+        }
+    }
+    if (self.currentVolume < 1.0f) {
+        self.currentVolume += 0.1f;
+    }
+    [volumeViewSlider setValue:self.currentVolume animated:YES];
+    [volumeViewSlider sendActionsForControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)decreaseVolume {
+    UISlider* volumeViewSlider = nil;
+    for (UIView *view in [self.volumeView subviews]){
+        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
+            volumeViewSlider = (UISlider*)view;
+            break;
+        }
+    }
+    if (self.currentVolume > 0.0f) {
+        self.currentVolume -= 0.1f;
+    }
+    [volumeViewSlider setValue:self.currentVolume animated:NO];
+    [volumeViewSlider sendActionsForControlEvents:UIControlEventTouchUpInside];
+}
 
 #pragma mark - Web socket
 - (void)connectWebSocket {
@@ -105,12 +138,10 @@
 - (void)webSocketDidOpen:(SRWebSocket *)newWebSocket {
     self.webSocket = newWebSocket;
     [self.webSocket send:[NSString stringWithFormat:@"Hello from %@", [UIDevice currentDevice].name]];
-    NSLog(@"%@", @"hi");
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
     [self connectWebSocket];
-    NSLog(@"%@", @"hi");
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
