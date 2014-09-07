@@ -10,14 +10,14 @@
 #import "ConsumerCredentials.h"
 #import "MediaPlayer/MPVolumeView.h"
 #import "MusicViewController.h"
-//#import "SRWebSocket.h"
+#import "SRWebSocket.h"
 
 @interface MusicViewController ()//<SRWebSocketDelegate>
 
 @property (nonatomic, strong) Rdio *rdio;
 @property (nonatomic) BOOL isPlaying;
 @property (nonatomic, strong) NSMutableArray *topChartSongs;
-//@property (nonatomic, strong) SRWebSocket *webSocket;
+@property (nonatomic, strong) SRWebSocket *webSocket;
 
 @end
 
@@ -90,34 +90,34 @@
 
 
 #pragma mark - Web socket
-//- (void)connectWebSocket {
-//    self.webSocket.delegate = nil;
-//    self.webSocket = nil;
-//    
-//    NSString *urlString = @"ws://localhost:8080";
-//    SRWebSocket *newWebSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:urlString]];
-//    newWebSocket.delegate = self;
-//    
-//    [newWebSocket open];
-//}
-//
-//#pragma mark - SRWebSocketDelegate
-//
-//- (void)webSocketDidOpen:(SRWebSocket *)newWebSocket {
-//    self.webSocket = newWebSocket;
-//    [self.webSocket send:[NSString stringWithFormat:@"Hello from %@", [UIDevice currentDevice].name]];
-//}
-//
-//- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
-//    [self connectWebSocket];
-//}
-//
-//- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
-//    [self connectWebSocket];
-//}
-//
-//- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
-//    NSLog(@"%@", message);
-//}
+- (void)connectWebSocket {
+    self.webSocket.delegate = nil;
+    self.webSocket = nil;
+    
+    NSString *urlString = @"ws://localhost:8080";
+    SRWebSocket *newWebSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:urlString]];
+    newWebSocket.delegate = self;
+    
+    [newWebSocket open];
+}
+
+#pragma mark - SRWebSocketDelegate
+
+- (void)webSocketDidOpen:(SRWebSocket *)newWebSocket {
+    self.webSocket = newWebSocket;
+    [self.webSocket send:[NSString stringWithFormat:@"Hello from %@", [UIDevice currentDevice].name]];
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
+    [self connectWebSocket];
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
+    [self connectWebSocket];
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    NSLog(@"%@", message);
+}
 
 @end

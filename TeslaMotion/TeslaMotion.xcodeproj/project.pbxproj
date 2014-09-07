@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8822976119BBFB4C0098467D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822976019BBFB4C0098467D /* libicucore.dylib */; };
+		8822976619BBFB7A0098467D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8822976519BBFB7A0098467D /* SRWebSocket.m */; };
 		8871413319BBF79A00FD2476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413219BBF79A00FD2476 /* Foundation.framework */; };
 		8871413519BBF79A00FD2476 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413419BBF79A00FD2476 /* CoreGraphics.framework */; };
 		8871413719BBF79A00FD2476 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413619BBF79A00FD2476 /* UIKit.framework */; };
@@ -41,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F245704F8A342918C54A100 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8822976019BBFB4C0098467D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		8822976319BBFB7A0098467D /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		8822976419BBFB7A0098467D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		8822976519BBFB7A0098467D /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
 		8871412F19BBF79A00FD2476 /* TeslaMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8871413219BBF79A00FD2476 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8871413419BBF79A00FD2476 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,6 +75,7 @@
 		8871417919BBF86100FD2476 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8871417B19BBF86600FD2476 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8871417D19BBF86A00FD2476 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8871417F19BBFA5A00FD2476 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8871417A19BBF86100FD2476 /* Security.framework in Frameworks */,
+				8871417619BBF85300FD2476 /* CFNetwork.framework in Frameworks */,
+				8822976119BBFB4C0098467D /* libicucore.dylib in Frameworks */,
 				8871417E19BBF86A00FD2476 /* MediaPlayer.framework in Frameworks */,
 				8871417C19BBF86600FD2476 /* SystemConfiguration.framework in Frameworks */,
-				8871417A19BBF86100FD2476 /* Security.framework in Frameworks */,
 				8871417819BBF85C00FD2476 /* CoreMedia.framework in Frameworks */,
 				8871413519BBF79A00FD2476 /* CoreGraphics.framework in Frameworks */,
-				8871417619BBF85300FD2476 /* CFNetwork.framework in Frameworks */,
 				8871417419BBF84D00FD2476 /* AudioToolbox.framework in Frameworks */,
 				8871417019BBF7FD00FD2476 /* Rdio.framework in Frameworks */,
 				8871413719BBF79A00FD2476 /* UIKit.framework in Frameworks */,
@@ -101,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8822976219BBFB7A0098467D /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				8822976319BBFB7A0098467D /* SocketRocket-Prefix.pch */,
+				8822976419BBFB7A0098467D /* SRWebSocket.h */,
+				8822976519BBFB7A0098467D /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
 		8871412619BBF79A00FD2476 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +142,8 @@
 		8871413119BBF79A00FD2476 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8822976019BBFB4C0098467D /* libicucore.dylib */,
+				8871417F19BBFA5A00FD2476 /* libPods.a */,
 				8871417D19BBF86A00FD2476 /* MediaPlayer.framework */,
 				8871417B19BBF86600FD2476 /* SystemConfiguration.framework */,
 				8871417919BBF86100FD2476 /* Security.framework */,
@@ -134,6 +155,7 @@
 				8871413419BBF79A00FD2476 /* CoreGraphics.framework */,
 				8871413619BBF79A00FD2476 /* UIKit.framework */,
 				8871415419BBF79A00FD2476 /* XCTest.framework */,
+				6F245704F8A342918C54A100 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +208,7 @@
 		8871416D19BBF7EA00FD2476 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				8822976219BBFB7A0098467D /* SocketRocket */,
 				8871416E19BBF7EA00FD2476 /* rdio */,
 			);
 			path = Library;
@@ -213,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8871416419BBF79A00FD2476 /* Build configuration list for PBXNativeTarget "TeslaMotion" */;
 			buildPhases = (
+				2D74D70BD69C46029704A00D /* Check Pods Manifest.lock */,
 				8871412B19BBF79A00FD2476 /* Sources */,
 				8871412C19BBF79A00FD2476 /* Frameworks */,
 				8871412D19BBF79A00FD2476 /* Resources */,
+				5D378AC64B774836A2745A5E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,11 +323,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D74D70BD69C46029704A00D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D378AC64B774836A2745A5E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8871412B19BBF79A00FD2476 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8822976619BBFB7A0098467D /* SRWebSocket.m in Sources */,
 				8871416C19BBF7D700FD2476 /* MusicViewController.m in Sources */,
 				8871414319BBF79A00FD2476 /* AppDelegate.m in Sources */,
 				8871413F19BBF79A00FD2476 /* main.m in Sources */,
@@ -437,6 +496,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeslaMotion/TeslaMotion-Prefix.pch";
 				INFOPLIST_FILE = "TeslaMotion/TeslaMotion-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-all_load ";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,6 +516,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeslaMotion/TeslaMotion-Prefix.pch";
 				INFOPLIST_FILE = "TeslaMotion/TeslaMotion-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-all_load ";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load ";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -522,6 +583,7 @@
 				8871416619BBF79A00FD2476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8871416719BBF79A00FD2476 /* Build configuration list for PBXNativeTarget "TeslaMotionTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +592,7 @@
 				8871416919BBF79A00FD2476 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
