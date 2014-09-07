@@ -2,9 +2,9 @@ from vocalizer import Vocalizer
 from tesla_wrapper import TeslaWrapper
 
 class TeslaVocalizer(object):
-	def __init__(self):
+	def __init__(self, is_local=True):
 		self.vocalizer = Vocalizer()
-		self.wrapper = TeslaWrapper()
+		self.wrapper = TeslaWrapper(is_local)
 
 	def response_success_checker(self, response):
 		if response:

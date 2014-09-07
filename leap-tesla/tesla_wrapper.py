@@ -14,17 +14,19 @@ class TeslaWrapper(object):
 	"""
 
 	def __init__(self, is_local=True):
-		self.url = "https://portal.vn.teslamotors.com/"
-		self.vehicle_id = None
 		self.session = requests.session()
-		self.set_vehicle_id(19403)
+		if is_local:
+			self.url = "http://localhost:8080/mockTesla/"
+			self.set_vehicle_id(321)
+		else:
+			self.url = "https://portal.vn.teslamotors.com/"
+			self.set_vehicle_id(19403)
 		self.login()
 
 	def query_and_output(self, path):
 		url = self.url + path
-		print url
 		r  = self.session.get(url)
-		print r.text
+		print "Getting to URL: %s" % url
 		return self.output(r)
 
 	def output(self, response):
@@ -33,24 +35,17 @@ class TeslaWrapper(object):
 			output = response.json()
 		except:
 			output = {'status_code': response.status_code, 'response_body': response.text}
-		#print json.dumps(output, sort_keys=True,indent=4, separators=(',', ': '))
+		print json.dumps(output, sort_keys=True,indent=4, separators=(',', ': '))
 		return output
 
 	def login(self):
-		# values = urlencode([("user_session[email]", "mvanvleet@pillartechnology.com"), ("user_session[password]","move1234")])
-		# headers = {"Content-Type": "application/x-www-form-urlencoded"}
-		# request = Request("https://portal.vn.teslamotors.com/login", data=values, headers=headers)
-		# response_body = urlopen(request).read()
-		# print response_body
-		# print response_body
 		path = "login"
 		values = urlencode([("user_session[email]", "mvanvleet@pillartechnology.com"), ("user_session[password]","move1234")])
 		headers = {"Content-Type": "application/x-www-form-urlencoded"}
 		url = self.url + path
-		print url
 		r  = self.session.post(url, data=values, headers=headers)
-		print self.get_mobile_enabled()
-		print self.get_charge_state()
+		print "Posting to URL: %s" % url
+		self.output(r)
 
 	def vehicles(self):
 		path = "vehicles"
