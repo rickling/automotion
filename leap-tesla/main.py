@@ -17,14 +17,14 @@ from twilio_vocalizer import TwilioVocalizer
 import bloomberg_vocalizer
 from math import sqrt
 import time
-from multiprocessing import Process, Queue
 
-from twisted.python import log
-from twisted.internet import reactor
-log.startLogging(sys.stdout)
-from autobahn.twisted.websocket import WebSocketClientFactory
+from websocket import create_connection
 
-from ws_client import LeapClientProtocol
+RDIO_PLAY_PAUSE = "0"
+RDIO_NEXT = "1"
+RDIO_PREV = "2"
+RDIO_VOL_UP = "3"
+RDIO_VOL_DOWN = "4"
 
 def do_nothing():
     pass
@@ -39,7 +39,7 @@ class SampleListener(Leap.Listener):
 
     def on_init(self, controller):
         print "Initialized"
-        self.tesla = TeslaVocalizer()
+        self.tesla = TeslaVocalizer(is_local=False)
         self.twilio = TwilioVocalizer()
 
         self.TAP_GESTURES = {
@@ -50,14 +50,7 @@ class SampleListener(Leap.Listener):
             Leap.Finger.TYPE_PINKY : self.tesla.honk_horn,
         }
 
-            
-        self.factory = WebSocketClientFactory()
-        self.factory.protocol = LeapClientProtocol
-
-        #p = Process(target=open_socket, args=(self.factory,))
-        #p.start()
-
-        #self.factory.protocol.sendMessage("tits")
+        self.ws = create_connection("ws://localhost:9000")
 
     def on_connect(self, controller):
         print "Connected"
@@ -99,10 +92,6 @@ class SampleListener(Leap.Listener):
             direction = hand.direction
             pp = hand.palm_position
 
-            # FLICKING_OFF = True
-
-            #print pp
-
             ## STOCKS
             if hand.grab_strength > 0.9 and magnitude(hand.palm_velocity) < 40:
                 for finger in hand.fingers:
@@ -111,19 +100,24 @@ class SampleListener(Leap.Listener):
                             print "Stocks detected"
                             bloomberg_vocalizer.main()
 
-            #if direction[1] > 0.6 and normal[2] > 0.6:
-            for finger in hand.fingers:
-                if finger.type() == Leap.Finger.TYPE_INDEX:
-                    if not finger.direction[1] > 0.8:
-                        FLICKING_OFF = False
-                    #print finger.direction
-                    # print finger.stabilized_tip_position
-                    #print magnitude(finger.stabilized_tip_position - pp)
-                else:
-                    if not finger.direction[1] < 0:
-                        #FLICKING_OFF = False
-                        pass
-            #print FLICKING_OFF
+            """
+
+            MIDDLE_F = False
+            INDEX_F = False
+            if direction[1] < -0.8 and normal[2] > 0.8:
+                for finger in hand.fingers:
+                    if finger.type() == Leap.Finger.TYPE_MIDDLE:
+                        if finger.direction[1] < -0.8:
+                            MIDDLE_F = True
+                        #print finger.direction
+                        # print finger.stabilized_tip_position
+                        #print magnitude(finger.stabilized_tip_position - pp)
+                    if finger.type() == Leap.Finger.TYPE_INDEX:
+                        if finger.direction[1] > 0.3:
+                            #print finger.direction
+
+            """
+            
 
             # Get arm bone
             arm = hand.arm
@@ -140,7 +134,7 @@ class SampleListener(Leap.Listener):
                         THUMB = True
             if PINKY and THUMB:
                 print "Making a call"
-                #self.twilio.vocalize("calling", "+14695855530")
+                self.twilio.vocalize("calling", "+14695855530")
                 time.sleep(2)
 
 
@@ -187,6 +181,7 @@ class SampleListener(Leap.Listener):
                     else:
                         pass
                     time.sleep(0.5)
+                    print clockwiseness
 
                 # Calculate the angle swept since the last frame
                 swept_angle = 0
@@ -203,6 +198,7 @@ class SampleListener(Leap.Listener):
                 
                 #Sunroof Control
                 if swipe.direction[1] > 0.9:
+                    print "opening sunroof"
                     self.tesla.open_sun_roof()
                     time.sleep(2)
                 elif swipe.direction[1] < -0.9:
@@ -210,9 +206,17 @@ class SampleListener(Leap.Listener):
                     self.tesla.close_sun_roof()
                     time.sleep(2)
                 elif swipe.direction[2] < -0.9:
-                    print "opening sunroof"
+                    print "Play/Pause"
+                    self.ws.send(RDIO_PLAY_PAUSE)
                     time.sleep(2)
-                
+                elif swipe.direction[0] > 0.9:
+                    print "Next Song"
+                    self.ws.send(RDIO_NEXT)
+                    time.sleep(2)
+                elif swipe.direction[0] < -0.9:
+                    print "Prev Song"
+                    self.ws.send(RDIO_PREV)
+                    time.sleep(2)
 
             if gesture.type == Leap.Gesture.TYPE_KEY_TAP:
                 tap = Leap.KeyTapGesture(gesture)
@@ -236,11 +240,6 @@ class SampleListener(Leap.Listener):
 
         if state == Leap.Gesture.STATE_INVALID:
             return "STATE_INVALID"
-
-def open_socket(factory):           
-    reactor.connectTCP("127.0.0.1", 9000, factory)
-    reactor.run()
-
 
 
 def main():

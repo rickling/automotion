@@ -2,6 +2,10 @@ from autobahn.twisted.websocket import WebSocketClientProtocol
 
 class LeapClientProtocol(WebSocketClientProtocol):
 
+    def __init__(self):
+        super(LeapClientProtocol, self).__init__()
+        self.websocket_version = 0
+
     def onOpen(self):
         self.sendMessage(u"Hello, world!".encode('utf8'))
 
