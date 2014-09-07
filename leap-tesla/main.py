@@ -17,6 +17,14 @@ from twilio_vocalizer import TwilioVocalizer
 import bloomberg_vocalizer
 from math import sqrt
 import time
+from multiprocessing import Process, Queue
+
+from twisted.python import log
+from twisted.internet import reactor
+log.startLogging(sys.stdout)
+from autobahn.twisted.websocket import WebSocketClientFactory
+
+from ws_client import LeapClientProtocol
 
 def do_nothing():
     pass
@@ -35,13 +43,21 @@ class SampleListener(Leap.Listener):
         self.twilio = TwilioVocalizer()
 
         self.TAP_GESTURES = {
-            Leap.Finger.TYPE_THUMB : do_nothing,
+            Leap.Finger.TYPE_THUMB : self.tesla.honk_horn,
             Leap.Finger.TYPE_INDEX : self.tesla.lock_door,
             Leap.Finger.TYPE_MIDDLE : self.tesla.unlock_door,
             Leap.Finger.TYPE_RING : self.tesla.flash_lights,
-            Leap.Finger.TYPE_PINKY : do_nothing,
+            Leap.Finger.TYPE_PINKY : self.tesla.honk_horn,
         }
 
+            
+        self.factory = WebSocketClientFactory()
+        self.factory.protocol = LeapClientProtocol
+
+        #p = Process(target=open_socket, args=(self.factory,))
+        #p.start()
+
+        #self.factory.protocol.sendMessage("tits")
 
     def on_connect(self, controller):
         print "Connected"
@@ -51,7 +67,7 @@ class SampleListener(Leap.Listener):
         controller.enable_gesture(Leap.Gesture.TYPE_KEY_TAP);
         controller.enable_gesture(Leap.Gesture.TYPE_SCREEN_TAP);
         controller.enable_gesture(Leap.Gesture.TYPE_SWIPE);
-        controller.config.set("Gesture.Circle.MinRadius", 50.0)
+        controller.config.set("Gesture.Circle.MinRadius", 30.0)
         controller.config.set("Gesture.Circle.MinArc", 1.5)
         controller.config.set("Gesture.KeyTap.MinDistance", 10.0)
         controller.config.save()
@@ -92,6 +108,7 @@ class SampleListener(Leap.Listener):
                 for finger in hand.fingers:
                     if finger.type() == Leap.Finger.TYPE_THUMB:
                         if finger.direction[0] < -0.9:
+                            print "Stocks detected"
                             bloomberg_vocalizer.main()
 
             #if direction[1] > 0.6 and normal[2] > 0.6:
@@ -122,7 +139,8 @@ class SampleListener(Leap.Listener):
                     if finger.direction[1] > 0.75:
                         THUMB = True
             if PINKY and THUMB:
-                self.twilio.vocalize("calling", "+14695855530")
+                print "Making a call"
+                #self.twilio.vocalize("calling", "+14695855530")
                 time.sleep(2)
 
 
@@ -163,7 +181,12 @@ class SampleListener(Leap.Listener):
                 else:
                     clockwiseness = "counterclockwise"
 
-                # print clockwiseness
+                if circle.progress > 1.0:
+                    if clockwiseness == "clockwise":
+                        pass
+                    else:
+                        pass
+                    time.sleep(0.5)
 
                 # Calculate the angle swept since the last frame
                 swept_angle = 0
@@ -183,9 +206,11 @@ class SampleListener(Leap.Listener):
                     self.tesla.open_sun_roof()
                     time.sleep(2)
                 elif swipe.direction[1] < -0.9:
+                    print "closing sunroof"
                     self.tesla.close_sun_roof()
                     time.sleep(2)
                 elif swipe.direction[2] < -0.9:
+                    print "opening sunroof"
                     time.sleep(2)
                 
 
@@ -211,6 +236,12 @@ class SampleListener(Leap.Listener):
 
         if state == Leap.Gesture.STATE_INVALID:
             return "STATE_INVALID"
+
+def open_socket(factory):           
+    reactor.connectTCP("127.0.0.1", 9000, factory)
+    reactor.run()
+
+
 
 def main():
     # Create a sample listener and controller
