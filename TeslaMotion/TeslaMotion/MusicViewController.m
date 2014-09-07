@@ -12,7 +12,7 @@
 #import "MusicViewController.h"
 #import "SRWebSocket.h"
 
-@interface MusicViewController ()//<SRWebSocketDelegate>
+@interface MusicViewController ()<SRWebSocketDelegate>
 
 @property (nonatomic, strong) Rdio *rdio;
 @property (nonatomic) BOOL isPlaying;
@@ -28,7 +28,7 @@
     self.isPlaying = NO;
     [self setupRdio];
     [self setupMusicView];
-    //[self connectWebSocket];
+    [self connectWebSocket];
 }
 
 #pragma mark - Setup rdio
@@ -102,14 +102,15 @@
 }
 
 #pragma mark - SRWebSocketDelegate
-
 - (void)webSocketDidOpen:(SRWebSocket *)newWebSocket {
     self.webSocket = newWebSocket;
     [self.webSocket send:[NSString stringWithFormat:@"Hello from %@", [UIDevice currentDevice].name]];
+    NSLog(@"%@", @"hi");
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
     [self connectWebSocket];
+    NSLog(@"%@", @"hi");
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {

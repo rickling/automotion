@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8871412E19BBF79A00FD2476"
+               BlueprintIdentifier = "8822976F19BBFC960098467D"
                BuildableName = "TeslaMotion.app"
                BlueprintName = "TeslaMotion"
                ReferencedContainer = "container:TeslaMotion.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8871415219BBF79A00FD2476"
+               BlueprintIdentifier = "8822979319BBFC960098467D"
                BuildableName = "TeslaMotionTests.xctest"
                BlueprintName = "TeslaMotionTests"
                ReferencedContainer = "container:TeslaMotion.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8871412E19BBF79A00FD2476"
+            BlueprintIdentifier = "8822976F19BBFC960098467D"
             BuildableName = "TeslaMotion.app"
             BlueprintName = "TeslaMotion"
             ReferencedContainer = "container:TeslaMotion.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8871412E19BBF79A00FD2476"
+            BlueprintIdentifier = "8822976F19BBFC960098467D"
             BuildableName = "TeslaMotion.app"
             BlueprintName = "TeslaMotion"
             ReferencedContainer = "container:TeslaMotion.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8871412E19BBF79A00FD2476"
+            BlueprintIdentifier = "8822976F19BBFC960098467D"
             BuildableName = "TeslaMotion.app"
             BlueprintName = "TeslaMotion"
             ReferencedContainer = "container:TeslaMotion.xcodeproj">

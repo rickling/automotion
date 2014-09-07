@@ -7,224 +7,220 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8822976119BBFB4C0098467D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822976019BBFB4C0098467D /* libicucore.dylib */; };
-		8822976619BBFB7A0098467D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8822976519BBFB7A0098467D /* SRWebSocket.m */; };
-		8871413319BBF79A00FD2476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413219BBF79A00FD2476 /* Foundation.framework */; };
-		8871413519BBF79A00FD2476 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413419BBF79A00FD2476 /* CoreGraphics.framework */; };
-		8871413719BBF79A00FD2476 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413619BBF79A00FD2476 /* UIKit.framework */; };
-		8871413D19BBF79A00FD2476 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8871413B19BBF79A00FD2476 /* InfoPlist.strings */; };
-		8871413F19BBF79A00FD2476 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8871413E19BBF79A00FD2476 /* main.m */; };
-		8871414319BBF79A00FD2476 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8871414219BBF79A00FD2476 /* AppDelegate.m */; };
-		8871414619BBF79A00FD2476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8871414419BBF79A00FD2476 /* Main.storyboard */; };
-		8871414E19BBF79A00FD2476 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8871414D19BBF79A00FD2476 /* Images.xcassets */; };
-		8871415519BBF79A00FD2476 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871415419BBF79A00FD2476 /* XCTest.framework */; };
-		8871415619BBF79A00FD2476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413219BBF79A00FD2476 /* Foundation.framework */; };
-		8871415719BBF79A00FD2476 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871413619BBF79A00FD2476 /* UIKit.framework */; };
-		8871415F19BBF79A00FD2476 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8871415D19BBF79A00FD2476 /* InfoPlist.strings */; };
-		8871416119BBF79A00FD2476 /* TeslaMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8871416019BBF79A00FD2476 /* TeslaMotionTests.m */; };
-		8871416C19BBF7D700FD2476 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8871416A19BBF7D700FD2476 /* MusicViewController.m */; };
-		8871417019BBF7FD00FD2476 /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871416F19BBF7FD00FD2476 /* Rdio.framework */; };
-		8871417419BBF84D00FD2476 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871417319BBF84D00FD2476 /* AudioToolbox.framework */; };
-		8871417619BBF85300FD2476 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871417519BBF85300FD2476 /* CFNetwork.framework */; };
-		8871417819BBF85C00FD2476 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871417719BBF85C00FD2476 /* CoreMedia.framework */; };
-		8871417A19BBF86100FD2476 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871417919BBF86100FD2476 /* Security.framework */; };
-		8871417C19BBF86600FD2476 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871417B19BBF86600FD2476 /* SystemConfiguration.framework */; };
-		8871417E19BBF86A00FD2476 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8871417D19BBF86A00FD2476 /* MediaPlayer.framework */; };
+		8822977419BBFC960098467D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977319BBFC960098467D /* Foundation.framework */; };
+		8822977619BBFC960098467D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977519BBFC960098467D /* CoreGraphics.framework */; };
+		8822977819BBFC960098467D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977719BBFC960098467D /* UIKit.framework */; };
+		8822977E19BBFC960098467D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8822977C19BBFC960098467D /* InfoPlist.strings */; };
+		8822978019BBFC960098467D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8822977F19BBFC960098467D /* main.m */; };
+		8822978419BBFC960098467D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8822978319BBFC960098467D /* AppDelegate.m */; };
+		8822978719BBFC960098467D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8822978519BBFC960098467D /* Main.storyboard */; };
+		8822978F19BBFC960098467D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8822978E19BBFC960098467D /* Images.xcassets */; };
+		8822979619BBFC960098467D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822979519BBFC960098467D /* XCTest.framework */; };
+		8822979719BBFC960098467D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977319BBFC960098467D /* Foundation.framework */; };
+		8822979819BBFC960098467D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8822977719BBFC960098467D /* UIKit.framework */; };
+		882297A019BBFC960098467D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8822979E19BBFC960098467D /* InfoPlist.strings */; };
+		882297A219BBFC960098467D /* TeslaMotionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 882297A119BBFC960098467D /* TeslaMotionTests.m */; };
+		882297B519BBFCEC0098467D /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 882297B019BBFCEC0098467D /* SRWebSocket.m */; };
+		882297B619BBFCEC0098467D /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882297B119BBFCEC0098467D /* MusicViewController.m */; };
+		882297B819BBFD0F0098467D /* Rdio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297B719BBFD0F0098467D /* Rdio.framework */; };
+		882297BA19BBFD260098467D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297B919BBFD260098467D /* AudioToolbox.framework */; };
+		882297BC19BBFD2B0098467D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297BB19BBFD2B0098467D /* CFNetwork.framework */; };
+		882297BE19BBFD350098467D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297BD19BBFD350098467D /* CoreMedia.framework */; };
+		882297C019BBFD3B0098467D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297BF19BBFD3B0098467D /* Security.framework */; };
+		882297C219BBFD3F0098467D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297C119BBFD3F0098467D /* SystemConfiguration.framework */; };
+		882297C419BBFD430098467D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297C319BBFD430098467D /* MediaPlayer.framework */; };
+		882297C619BBFD690098467D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 882297C519BBFD690098467D /* libicucore.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8871415819BBF79A00FD2476 /* PBXContainerItemProxy */ = {
+		8822979919BBFC960098467D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8871412719BBF79A00FD2476 /* Project object */;
+			containerPortal = 8822976819BBFC960098467D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8871412E19BBF79A00FD2476;
+			remoteGlobalIDString = 8822976F19BBFC960098467D;
 			remoteInfo = TeslaMotion;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6F245704F8A342918C54A100 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8822976019BBFB4C0098467D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		8822976319BBFB7A0098467D /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
-		8822976419BBFB7A0098467D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
-		8822976519BBFB7A0098467D /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
-		8871412F19BBF79A00FD2476 /* TeslaMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8871413219BBF79A00FD2476 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8871413419BBF79A00FD2476 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8871413619BBF79A00FD2476 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8871413A19BBF79A00FD2476 /* TeslaMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeslaMotion-Info.plist"; sourceTree = "<group>"; };
-		8871413C19BBF79A00FD2476 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8871413E19BBF79A00FD2476 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8871414019BBF79A00FD2476 /* TeslaMotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeslaMotion-Prefix.pch"; sourceTree = "<group>"; };
-		8871414119BBF79A00FD2476 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8871414219BBF79A00FD2476 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8871414519BBF79A00FD2476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8871414D19BBF79A00FD2476 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8871415319BBF79A00FD2476 /* TeslaMotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaMotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8871415419BBF79A00FD2476 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8871415C19BBF79A00FD2476 /* TeslaMotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeslaMotionTests-Info.plist"; sourceTree = "<group>"; };
-		8871415E19BBF79A00FD2476 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8871416019BBF79A00FD2476 /* TeslaMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeslaMotionTests.m; sourceTree = "<group>"; };
-		8871416A19BBF7D700FD2476 /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
-		8871416B19BBF7D700FD2476 /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
-		8871416F19BBF7FD00FD2476 /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rdio.framework; sourceTree = "<group>"; };
-		8871417219BBF80E00FD2476 /* ConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerCredentials.h; sourceTree = "<group>"; };
-		8871417319BBF84D00FD2476 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		8871417519BBF85300FD2476 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		8871417719BBF85C00FD2476 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		8871417919BBF86100FD2476 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		8871417B19BBF86600FD2476 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		8871417D19BBF86A00FD2476 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		8871417F19BBFA5A00FD2476 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		8822977019BBFC960098467D /* TeslaMotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeslaMotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8822977319BBFC960098467D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8822977519BBFC960098467D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8822977719BBFC960098467D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8822977B19BBFC960098467D /* TeslaMotion-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeslaMotion-Info.plist"; sourceTree = "<group>"; };
+		8822977D19BBFC960098467D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8822977F19BBFC960098467D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8822978119BBFC960098467D /* TeslaMotion-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeslaMotion-Prefix.pch"; sourceTree = "<group>"; };
+		8822978219BBFC960098467D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8822978319BBFC960098467D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8822978619BBFC960098467D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8822978E19BBFC960098467D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8822979419BBFC960098467D /* TeslaMotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeslaMotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8822979519BBFC960098467D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8822979D19BBFC960098467D /* TeslaMotionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TeslaMotionTests-Info.plist"; sourceTree = "<group>"; };
+		8822979F19BBFC960098467D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		882297A119BBFC960098467D /* TeslaMotionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeslaMotionTests.m; sourceTree = "<group>"; };
+		882297AE19BBFCEC0098467D /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		882297AF19BBFCEC0098467D /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		882297B019BBFCEC0098467D /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		882297B119BBFCEC0098467D /* MusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		882297B219BBFCEC0098467D /* MusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		882297B419BBFCEC0098467D /* ConsumerCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerCredentials.h; sourceTree = "<group>"; };
+		882297B719BBFD0F0098467D /* Rdio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Rdio.framework; sourceTree = "<group>"; };
+		882297B919BBFD260098467D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		882297BB19BBFD2B0098467D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		882297BD19BBFD350098467D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		882297BF19BBFD3B0098467D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		882297C119BBFD3F0098467D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		882297C319BBFD430098467D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		882297C519BBFD690098467D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8871412C19BBF79A00FD2476 /* Frameworks */ = {
+		8822976D19BBFC960098467D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8871417A19BBF86100FD2476 /* Security.framework in Frameworks */,
-				8871417619BBF85300FD2476 /* CFNetwork.framework in Frameworks */,
-				8822976119BBFB4C0098467D /* libicucore.dylib in Frameworks */,
-				8871417E19BBF86A00FD2476 /* MediaPlayer.framework in Frameworks */,
-				8871417C19BBF86600FD2476 /* SystemConfiguration.framework in Frameworks */,
-				8871417819BBF85C00FD2476 /* CoreMedia.framework in Frameworks */,
-				8871413519BBF79A00FD2476 /* CoreGraphics.framework in Frameworks */,
-				8871417419BBF84D00FD2476 /* AudioToolbox.framework in Frameworks */,
-				8871417019BBF7FD00FD2476 /* Rdio.framework in Frameworks */,
-				8871413719BBF79A00FD2476 /* UIKit.framework in Frameworks */,
-				8871413319BBF79A00FD2476 /* Foundation.framework in Frameworks */,
+				882297C019BBFD3B0098467D /* Security.framework in Frameworks */,
+				882297C619BBFD690098467D /* libicucore.dylib in Frameworks */,
+				882297C419BBFD430098467D /* MediaPlayer.framework in Frameworks */,
+				882297C219BBFD3F0098467D /* SystemConfiguration.framework in Frameworks */,
+				882297BE19BBFD350098467D /* CoreMedia.framework in Frameworks */,
+				8822977619BBFC960098467D /* CoreGraphics.framework in Frameworks */,
+				882297BC19BBFD2B0098467D /* CFNetwork.framework in Frameworks */,
+				882297BA19BBFD260098467D /* AudioToolbox.framework in Frameworks */,
+				882297B819BBFD0F0098467D /* Rdio.framework in Frameworks */,
+				8822977819BBFC960098467D /* UIKit.framework in Frameworks */,
+				8822977419BBFC960098467D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8871415019BBF79A00FD2476 /* Frameworks */ = {
+		8822979119BBFC960098467D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8871415519BBF79A00FD2476 /* XCTest.framework in Frameworks */,
-				8871415719BBF79A00FD2476 /* UIKit.framework in Frameworks */,
-				8871415619BBF79A00FD2476 /* Foundation.framework in Frameworks */,
+				8822979619BBFC960098467D /* XCTest.framework in Frameworks */,
+				8822979819BBFC960098467D /* UIKit.framework in Frameworks */,
+				8822979719BBFC960098467D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8822976219BBFB7A0098467D /* SocketRocket */ = {
+		8822976719BBFC960098467D = {
 			isa = PBXGroup;
 			children = (
-				8822976319BBFB7A0098467D /* SocketRocket-Prefix.pch */,
-				8822976419BBFB7A0098467D /* SRWebSocket.h */,
-				8822976519BBFB7A0098467D /* SRWebSocket.m */,
-			);
-			path = SocketRocket;
-			sourceTree = "<group>";
-		};
-		8871412619BBF79A00FD2476 = {
-			isa = PBXGroup;
-			children = (
-				8871413819BBF79A00FD2476 /* TeslaMotion */,
-				8871415A19BBF79A00FD2476 /* TeslaMotionTests */,
-				8871413119BBF79A00FD2476 /* Frameworks */,
-				8871413019BBF79A00FD2476 /* Products */,
+				8822977919BBFC960098467D /* TeslaMotion */,
+				8822979B19BBFC960098467D /* TeslaMotionTests */,
+				8822977219BBFC960098467D /* Frameworks */,
+				8822977119BBFC960098467D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8871413019BBF79A00FD2476 /* Products */ = {
+		8822977119BBFC960098467D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8871412F19BBF79A00FD2476 /* TeslaMotion.app */,
-				8871415319BBF79A00FD2476 /* TeslaMotionTests.xctest */,
+				8822977019BBFC960098467D /* TeslaMotion.app */,
+				8822979419BBFC960098467D /* TeslaMotionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8871413119BBF79A00FD2476 /* Frameworks */ = {
+		8822977219BBFC960098467D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8822976019BBFB4C0098467D /* libicucore.dylib */,
-				8871417F19BBFA5A00FD2476 /* libPods.a */,
-				8871417D19BBF86A00FD2476 /* MediaPlayer.framework */,
-				8871417B19BBF86600FD2476 /* SystemConfiguration.framework */,
-				8871417919BBF86100FD2476 /* Security.framework */,
-				8871417719BBF85C00FD2476 /* CoreMedia.framework */,
-				8871417519BBF85300FD2476 /* CFNetwork.framework */,
-				8871417319BBF84D00FD2476 /* AudioToolbox.framework */,
-				8871416F19BBF7FD00FD2476 /* Rdio.framework */,
-				8871413219BBF79A00FD2476 /* Foundation.framework */,
-				8871413419BBF79A00FD2476 /* CoreGraphics.framework */,
-				8871413619BBF79A00FD2476 /* UIKit.framework */,
-				8871415419BBF79A00FD2476 /* XCTest.framework */,
-				6F245704F8A342918C54A100 /* libPods.a */,
+				882297C519BBFD690098467D /* libicucore.dylib */,
+				882297C319BBFD430098467D /* MediaPlayer.framework */,
+				882297C119BBFD3F0098467D /* SystemConfiguration.framework */,
+				882297BF19BBFD3B0098467D /* Security.framework */,
+				882297BD19BBFD350098467D /* CoreMedia.framework */,
+				882297BB19BBFD2B0098467D /* CFNetwork.framework */,
+				882297B919BBFD260098467D /* AudioToolbox.framework */,
+				882297B719BBFD0F0098467D /* Rdio.framework */,
+				8822977319BBFC960098467D /* Foundation.framework */,
+				8822977519BBFC960098467D /* CoreGraphics.framework */,
+				8822977719BBFC960098467D /* UIKit.framework */,
+				8822979519BBFC960098467D /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8871413819BBF79A00FD2476 /* TeslaMotion */ = {
+		8822977919BBFC960098467D /* TeslaMotion */ = {
 			isa = PBXGroup;
 			children = (
-				8871417119BBF80E00FD2476 /* Credentials */,
-				8871416D19BBF7EA00FD2476 /* Library */,
-				8871416B19BBF7D700FD2476 /* MusicViewController.h */,
-				8871416A19BBF7D700FD2476 /* MusicViewController.m */,
-				8871414119BBF79A00FD2476 /* AppDelegate.h */,
-				8871414219BBF79A00FD2476 /* AppDelegate.m */,
-				8871414419BBF79A00FD2476 /* Main.storyboard */,
-				8871414D19BBF79A00FD2476 /* Images.xcassets */,
-				8871413919BBF79A00FD2476 /* Supporting Files */,
+				882297AB19BBFCEC0098467D /* Library */,
+				882297B219BBFCEC0098467D /* MusicViewController.h */,
+				882297B119BBFCEC0098467D /* MusicViewController.m */,
+				882297B319BBFCEC0098467D /* Credentials */,
+				8822978219BBFC960098467D /* AppDelegate.h */,
+				8822978319BBFC960098467D /* AppDelegate.m */,
+				8822978519BBFC960098467D /* Main.storyboard */,
+				8822978E19BBFC960098467D /* Images.xcassets */,
+				8822977A19BBFC960098467D /* Supporting Files */,
 			);
 			path = TeslaMotion;
 			sourceTree = "<group>";
 		};
-		8871413919BBF79A00FD2476 /* Supporting Files */ = {
+		8822977A19BBFC960098467D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8871413A19BBF79A00FD2476 /* TeslaMotion-Info.plist */,
-				8871413B19BBF79A00FD2476 /* InfoPlist.strings */,
-				8871413E19BBF79A00FD2476 /* main.m */,
-				8871414019BBF79A00FD2476 /* TeslaMotion-Prefix.pch */,
+				8822977B19BBFC960098467D /* TeslaMotion-Info.plist */,
+				8822977C19BBFC960098467D /* InfoPlist.strings */,
+				8822977F19BBFC960098467D /* main.m */,
+				8822978119BBFC960098467D /* TeslaMotion-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8871415A19BBF79A00FD2476 /* TeslaMotionTests */ = {
+		8822979B19BBFC960098467D /* TeslaMotionTests */ = {
 			isa = PBXGroup;
 			children = (
-				8871416019BBF79A00FD2476 /* TeslaMotionTests.m */,
-				8871415B19BBF79A00FD2476 /* Supporting Files */,
+				882297A119BBFC960098467D /* TeslaMotionTests.m */,
+				8822979C19BBFC960098467D /* Supporting Files */,
 			);
 			path = TeslaMotionTests;
 			sourceTree = "<group>";
 		};
-		8871415B19BBF79A00FD2476 /* Supporting Files */ = {
+		8822979C19BBFC960098467D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8871415C19BBF79A00FD2476 /* TeslaMotionTests-Info.plist */,
-				8871415D19BBF79A00FD2476 /* InfoPlist.strings */,
+				8822979D19BBFC960098467D /* TeslaMotionTests-Info.plist */,
+				8822979E19BBFC960098467D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8871416D19BBF7EA00FD2476 /* Library */ = {
+		882297AB19BBFCEC0098467D /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				8822976219BBFB7A0098467D /* SocketRocket */,
-				8871416E19BBF7EA00FD2476 /* rdio */,
+				882297AC19BBFCEC0098467D /* rdio */,
+				882297AD19BBFCEC0098467D /* SocketRocket */,
 			);
 			path = Library;
 			sourceTree = "<group>";
 		};
-		8871416E19BBF7EA00FD2476 /* rdio */ = {
+		882297AC19BBFCEC0098467D /* rdio */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = rdio;
 			sourceTree = "<group>";
 		};
-		8871417119BBF80E00FD2476 /* Credentials */ = {
+		882297AD19BBFCEC0098467D /* SocketRocket */ = {
 			isa = PBXGroup;
 			children = (
-				8871417219BBF80E00FD2476 /* ConsumerCredentials.h */,
+				882297AE19BBFCEC0098467D /* SocketRocket-Prefix.pch */,
+				882297AF19BBFCEC0098467D /* SRWebSocket.h */,
+				882297B019BBFCEC0098467D /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		882297B319BBFCEC0098467D /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				882297B419BBFCEC0098467D /* ConsumerCredentials.h */,
 			);
 			path = Credentials;
 			sourceTree = "<group>";
@@ -232,15 +228,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8871412E19BBF79A00FD2476 /* TeslaMotion */ = {
+		8822976F19BBFC960098467D /* TeslaMotion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8871416419BBF79A00FD2476 /* Build configuration list for PBXNativeTarget "TeslaMotion" */;
+			buildConfigurationList = 882297A519BBFC960098467D /* Build configuration list for PBXNativeTarget "TeslaMotion" */;
 			buildPhases = (
-				2D74D70BD69C46029704A00D /* Check Pods Manifest.lock */,
-				8871412B19BBF79A00FD2476 /* Sources */,
-				8871412C19BBF79A00FD2476 /* Frameworks */,
-				8871412D19BBF79A00FD2476 /* Resources */,
-				5D378AC64B774836A2745A5E /* Copy Pods Resources */,
+				8822976C19BBFC960098467D /* Sources */,
+				8822976D19BBFC960098467D /* Frameworks */,
+				8822976E19BBFC960098467D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -248,42 +242,42 @@
 			);
 			name = TeslaMotion;
 			productName = TeslaMotion;
-			productReference = 8871412F19BBF79A00FD2476 /* TeslaMotion.app */;
+			productReference = 8822977019BBFC960098467D /* TeslaMotion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8871415219BBF79A00FD2476 /* TeslaMotionTests */ = {
+		8822979319BBFC960098467D /* TeslaMotionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8871416719BBF79A00FD2476 /* Build configuration list for PBXNativeTarget "TeslaMotionTests" */;
+			buildConfigurationList = 882297A819BBFC960098467D /* Build configuration list for PBXNativeTarget "TeslaMotionTests" */;
 			buildPhases = (
-				8871414F19BBF79A00FD2476 /* Sources */,
-				8871415019BBF79A00FD2476 /* Frameworks */,
-				8871415119BBF79A00FD2476 /* Resources */,
+				8822979019BBFC960098467D /* Sources */,
+				8822979119BBFC960098467D /* Frameworks */,
+				8822979219BBFC960098467D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8871415919BBF79A00FD2476 /* PBXTargetDependency */,
+				8822979A19BBFC960098467D /* PBXTargetDependency */,
 			);
 			name = TeslaMotionTests;
 			productName = TeslaMotionTests;
-			productReference = 8871415319BBF79A00FD2476 /* TeslaMotionTests.xctest */;
+			productReference = 8822979419BBFC960098467D /* TeslaMotionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8871412719BBF79A00FD2476 /* Project object */ = {
+		8822976819BBFC960098467D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Rick Ling";
 				TargetAttributes = {
-					8871415219BBF79A00FD2476 = {
-						TestTargetID = 8871412E19BBF79A00FD2476;
+					8822979319BBFC960098467D = {
+						TestTargetID = 8822976F19BBFC960098467D;
 					};
 				};
 			};
-			buildConfigurationList = 8871412A19BBF79A00FD2476 /* Build configuration list for PBXProject "TeslaMotion" */;
+			buildConfigurationList = 8822976B19BBFC960098467D /* Build configuration list for PBXProject "TeslaMotion" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -291,122 +285,89 @@
 				en,
 				Base,
 			);
-			mainGroup = 8871412619BBF79A00FD2476;
-			productRefGroup = 8871413019BBF79A00FD2476 /* Products */;
+			mainGroup = 8822976719BBFC960098467D;
+			productRefGroup = 8822977119BBFC960098467D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8871412E19BBF79A00FD2476 /* TeslaMotion */,
-				8871415219BBF79A00FD2476 /* TeslaMotionTests */,
+				8822976F19BBFC960098467D /* TeslaMotion */,
+				8822979319BBFC960098467D /* TeslaMotionTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8871412D19BBF79A00FD2476 /* Resources */ = {
+		8822976E19BBFC960098467D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8871414E19BBF79A00FD2476 /* Images.xcassets in Resources */,
-				8871413D19BBF79A00FD2476 /* InfoPlist.strings in Resources */,
-				8871414619BBF79A00FD2476 /* Main.storyboard in Resources */,
+				8822978F19BBFC960098467D /* Images.xcassets in Resources */,
+				8822977E19BBFC960098467D /* InfoPlist.strings in Resources */,
+				8822978719BBFC960098467D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8871415119BBF79A00FD2476 /* Resources */ = {
+		8822979219BBFC960098467D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8871415F19BBF79A00FD2476 /* InfoPlist.strings in Resources */,
+				882297A019BBFC960098467D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2D74D70BD69C46029704A00D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5D378AC64B774836A2745A5E /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		8871412B19BBF79A00FD2476 /* Sources */ = {
+		8822976C19BBFC960098467D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8822976619BBFB7A0098467D /* SRWebSocket.m in Sources */,
-				8871416C19BBF7D700FD2476 /* MusicViewController.m in Sources */,
-				8871414319BBF79A00FD2476 /* AppDelegate.m in Sources */,
-				8871413F19BBF79A00FD2476 /* main.m in Sources */,
+				882297B619BBFCEC0098467D /* MusicViewController.m in Sources */,
+				882297B519BBFCEC0098467D /* SRWebSocket.m in Sources */,
+				8822978419BBFC960098467D /* AppDelegate.m in Sources */,
+				8822978019BBFC960098467D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8871414F19BBF79A00FD2476 /* Sources */ = {
+		8822979019BBFC960098467D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8871416119BBF79A00FD2476 /* TeslaMotionTests.m in Sources */,
+				882297A219BBFC960098467D /* TeslaMotionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8871415919BBF79A00FD2476 /* PBXTargetDependency */ = {
+		8822979A19BBFC960098467D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8871412E19BBF79A00FD2476 /* TeslaMotion */;
-			targetProxy = 8871415819BBF79A00FD2476 /* PBXContainerItemProxy */;
+			target = 8822976F19BBFC960098467D /* TeslaMotion */;
+			targetProxy = 8822979919BBFC960098467D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8871413B19BBF79A00FD2476 /* InfoPlist.strings */ = {
+		8822977C19BBFC960098467D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8871413C19BBF79A00FD2476 /* en */,
+				8822977D19BBFC960098467D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8871414419BBF79A00FD2476 /* Main.storyboard */ = {
+		8822978519BBFC960098467D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8871414519BBF79A00FD2476 /* Base */,
+				8822978619BBFC960098467D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8871415D19BBF79A00FD2476 /* InfoPlist.strings */ = {
+		8822979E19BBFC960098467D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8871415E19BBF79A00FD2476 /* en */,
+				8822979F19BBFC960098467D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -414,7 +375,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8871416219BBF79A00FD2476 /* Debug */ = {
+		882297A319BBFC960098467D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -452,7 +413,7 @@
 			};
 			name = Debug;
 		};
-		8871416319BBF79A00FD2476 /* Release */ = {
+		882297A419BBFC960098467D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -484,7 +445,7 @@
 			};
 			name = Release;
 		};
-		8871416519BBF79A00FD2476 /* Debug */ = {
+		882297A619BBFC960098467D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -496,15 +457,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeslaMotion/TeslaMotion-Prefix.pch";
 				INFOPLIST_FILE = "TeslaMotion/TeslaMotion-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-all_load ";
-				"OTHER_LDFLAGS[arch=*]" = "-all_load ";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		8871416619BBF79A00FD2476 /* Release */ = {
+		882297A719BBFC960098467D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -516,15 +475,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TeslaMotion/TeslaMotion-Prefix.pch";
 				INFOPLIST_FILE = "TeslaMotion/TeslaMotion-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-all_load ";
-				"OTHER_LDFLAGS[arch=*]" = "-all_load ";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		8871416819BBF79A00FD2476 /* Debug */ = {
+		882297A919BBFC960098467D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeslaMotion.app/TeslaMotion";
@@ -546,7 +503,7 @@
 			};
 			name = Debug;
 		};
-		8871416919BBF79A00FD2476 /* Release */ = {
+		882297AA19BBFC960098467D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TeslaMotion.app/TeslaMotion";
@@ -567,34 +524,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8871412A19BBF79A00FD2476 /* Build configuration list for PBXProject "TeslaMotion" */ = {
+		8822976B19BBFC960098467D /* Build configuration list for PBXProject "TeslaMotion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8871416219BBF79A00FD2476 /* Debug */,
-				8871416319BBF79A00FD2476 /* Release */,
+				882297A319BBFC960098467D /* Debug */,
+				882297A419BBFC960098467D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8871416419BBF79A00FD2476 /* Build configuration list for PBXNativeTarget "TeslaMotion" */ = {
+		882297A519BBFC960098467D /* Build configuration list for PBXNativeTarget "TeslaMotion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8871416519BBF79A00FD2476 /* Debug */,
-				8871416619BBF79A00FD2476 /* Release */,
+				882297A619BBFC960098467D /* Debug */,
+				882297A719BBFC960098467D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		8871416719BBF79A00FD2476 /* Build configuration list for PBXNativeTarget "TeslaMotionTests" */ = {
+		882297A819BBFC960098467D /* Build configuration list for PBXNativeTarget "TeslaMotionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8871416819BBF79A00FD2476 /* Debug */,
-				8871416919BBF79A00FD2476 /* Release */,
+				882297A919BBFC960098467D /* Debug */,
+				882297AA19BBFC960098467D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8871412719BBF79A00FD2476 /* Project object */;
+	rootObject = 8822976819BBFC960098467D /* Project object */;
 }
